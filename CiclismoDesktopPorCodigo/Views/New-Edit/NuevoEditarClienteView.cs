@@ -41,7 +41,7 @@ namespace CiclismoDesktopPorCodigo.Views.New_Edit
             {
                 if (clienteReader.Read())
                 {
-
+                    txtNombre.Text = (string)clienteReader["Nombre"];
                 };
             }
             clienteReader?.Close();
