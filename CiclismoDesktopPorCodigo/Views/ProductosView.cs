@@ -37,15 +37,15 @@ namespace CiclismoDesktopPorCodigo.Views
             dataGridProductos.DataSource = productosTable;
         }
 
-        private void btnAgregar_Click(object sender, EventArgs e)
-        {
-            NuevoEditarProductoView nuevoEditarProductoView = new NuevoEditarProductoView();
-            nuevoEditarProductoView.ShowDialog();
-            CargarDatosAGrilla();
+        //private void btnAgregar_Click(object sender, EventArgs e)
+        //{
+        //    NuevoEditarProductoView nuevoEditarProductoView = new NuevoEditarProductoView();
+        //    nuevoEditarProductoView.ShowDialog();
+        //    CargarDatosAGrilla();
             //NuevoEditarProductoView nuevoEditarProductoView = new NuevoEditarProductoView();
             //nuevoEditarProductoView.ShowDialog();
             //CargarDatosAGrilla();
-        }
+        //}
         //private void btnEditar_Click_1(object sender, EventArgs e)
         //{
         //    int idProductoAModificar = (int)dataGridProductos.CurrentRow.Cells[0].Value;

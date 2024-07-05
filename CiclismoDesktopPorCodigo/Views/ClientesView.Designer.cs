@@ -61,7 +61,7 @@
             // btnEditar
             // 
             btnEditar.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            btnEditar.Location = new Point(192, 384);
+            btnEditar.Location = new Point(197, 384);
             btnEditar.Name = "btnEditar";
             btnEditar.Size = new Size(98, 41);
             btnEditar.TabIndex = 6;
@@ -75,7 +75,7 @@
             btnAgregar.Location = new Point(63, 384);
             btnAgregar.Name = "btnAgregar";
             btnAgregar.Size = new Size(98, 41);
-            btnAgregar.TabIndex = 5;
+            btnAgregar.TabIndex = 6;
             btnAgregar.Text = "&Agregar";
             btnAgregar.UseVisualStyleBackColor = true;
             btnAgregar.Click += btnAgregar_Click;
