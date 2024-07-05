@@ -1,4 +1,5 @@
 ﻿using CiclismoDesktopPorCodigo.Utils;
+using CiclismoDesktopPorCodigo.Views.New_Edit;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

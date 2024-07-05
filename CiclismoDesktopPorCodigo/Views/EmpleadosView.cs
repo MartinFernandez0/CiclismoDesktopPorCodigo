@@ -52,16 +52,16 @@ namespace CiclismoDesktopPorCodigo.Views
             //mostramos un messagebox que pregunta "Estas seguro que desea borrarlo"
             DialogResult respuesta = MessageBox.Show
                 (
-                $"Está seguro que quiere eliminar al cliente {nombreEmpleado}?",
-                "Eliminar cliente",
+                $"Está seguro que quiere eliminar al empleado {nombreEmpleado}?",
+                "Eliminar empleado",
                 MessageBoxButtons.YesNo,
                 MessageBoxIcon.Question
                 );
 
-            //si el usuario selecciono "SI" - enviamos a borrar el cliente utilizando el ID y la objeto Repo.
+            //si el usuario selecciono "SI" - enviamos a borrar el empleado utilizando el ID y la objeto Repo.
             if (respuesta == DialogResult.Yes)
             {
-                comand.CommandText = $"Delete from clientes where id={idEmpleadoAEliminar}";
+                comand.CommandText = $"Delete from empleado where id={idEmpleadoAEliminar}";
                 comand.ExecuteNonQuery();
                 CargarDatosAGrilla();
             }
