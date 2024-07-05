@@ -146,9 +146,9 @@ namespace CiclismoDesktopPorCodigo.Views
             label2.AutoSize = true;
             label2.Location = new Point(34, 73);
             label2.Name = "label2";
-            label2.Size = new Size(94, 15);
+            label2.Size = new Size(43, 15);
             label2.TabIndex = 2;
-            label2.Text = "Nombre Cliente:";
+            label2.Text = "Vamss:";
             // 
             // txtApellidoContactoCliente
             // 
