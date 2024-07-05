@@ -29,7 +29,10 @@
         private void InitializeComponent()
         {
             dataGridProductos = new DataGridView();
-            btnAgregar = new Button();
+            btnSalir = new Button();
+            btnEliminar = new Button();
+            btnEditar = new Button();
+            button1 = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridProductos).BeginInit();
             SuspendLayout();
             // 
@@ -42,21 +45,59 @@
             dataGridProductos.Size = new Size(681, 278);
             dataGridProductos.TabIndex = 19;
             // 
-            // btnAgregar
+            // btnSalir
             // 
-            btnAgregar.Location = new Point(99, 383);
-            btnAgregar.Name = "btnAgregar";
-            btnAgregar.Size = new Size(75, 23);
-            btnAgregar.TabIndex = 20;
-            btnAgregar.Text = "Agregar";
-            btnAgregar.UseVisualStyleBackColor = true;
+            btnSalir.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            btnSalir.Location = new Point(639, 381);
+            btnSalir.Name = "btnSalir";
+            btnSalir.Size = new Size(93, 41);
+            btnSalir.TabIndex = 24;
+            btnSalir.Text = "Salir";
+            btnSalir.UseVisualStyleBackColor = true;
+            btnSalir.Click += btnSalir_Click_1;
+            // 
+            // btnEliminar
+            // 
+            btnEliminar.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            btnEliminar.Location = new Point(309, 381);
+            btnEliminar.Name = "btnEliminar";
+            btnEliminar.Size = new Size(91, 41);
+            btnEliminar.TabIndex = 23;
+            btnEliminar.Text = "El&iminar";
+            btnEliminar.UseVisualStyleBackColor = true;
+            btnEliminar.Click += btnEliminar_Click_1;
+            // 
+            // btnEditar
+            // 
+            btnEditar.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            btnEditar.Location = new Point(180, 381);
+            btnEditar.Name = "btnEditar";
+            btnEditar.Size = new Size(98, 41);
+            btnEditar.TabIndex = 22;
+            btnEditar.Text = "&Editar";
+            btnEditar.UseVisualStyleBackColor = true;
+            btnEditar.Click += btnEditar_Click_1;
+            // 
+            // button1
+            // 
+            button1.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            button1.Location = new Point(51, 381);
+            button1.Name = "button1";
+            button1.Size = new Size(98, 41);
+            button1.TabIndex = 21;
+            button1.Text = "&Agregar";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // ProductosView
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(btnAgregar);
+            Controls.Add(btnSalir);
+            Controls.Add(btnEliminar);
+            Controls.Add(btnEditar);
+            Controls.Add(button1);
             Controls.Add(dataGridProductos);
             Name = "ProductosView";
             StartPosition = FormStartPosition.CenterParent;
@@ -68,6 +109,9 @@
         #endregion
 
         private DataGridView dataGridProductos;
-        private Button btnAgregar;
+        private Button btnSalir;
+        private Button btnEliminar;
+        private Button btnEditar;
+        private Button button1;
     }
 }

@@ -23,7 +23,7 @@ namespace CiclismoDesktopPorCodigo.Views
             comand.Connection = Helper.CrearConexion();
         }
 
-        public NuevoEditarEmpleadoView(int idEmpleadoAModificar)
+        public NuevoEditarEmpleadoView(int? idEmpleadoAModificar)
         {
             InitializeComponent();
 

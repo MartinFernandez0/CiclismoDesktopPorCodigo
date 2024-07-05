@@ -37,52 +37,48 @@ namespace CiclismoDesktopPorCodigo.Views
             dataGridProductos.DataSource = productosTable;
         }
 
-        //private void btnAgregar_Click(object sender, EventArgs e)
-        //{
-        //    NuevoEditarProductoView nuevoEditarProductoView = new NuevoEditarProductoView();
-        //    nuevoEditarProductoView.ShowDialog();
-        //    CargarDatosAGrilla();
-            //NuevoEditarProductoView nuevoEditarProductoView = new NuevoEditarProductoView();
-            //nuevoEditarProductoView.ShowDialog();
-            //CargarDatosAGrilla();
-        //}
-        //private void btnEditar_Click_1(object sender, EventArgs e)
-        //{
-        //    int idProductoAModificar = (int)dataGridProductos.CurrentRow.Cells[0].Value;
-        //    NuevoEditarProductoView nuevoEditarProductoView = new NuevoEditarProductoView(idProductoAModificar);
-        //    nuevoEditarProductoView.ShowDialog();
-        //    CargarDatosAGrilla();
-        //}
+        private void button1_Click(object sender, EventArgs e)
+        {
+            NuevoEditarProductoView nuevoEditarProductoView = new NuevoEditarProductoView();
+            nuevoEditarProductoView.ShowDialog();
+            CargarDatosAGrilla();
+        }
 
-        //private void btnEliminar_Click_1(object sender, EventArgs e)
-        //{
-        //    int idProductoAEliminar = (int)dataGridProductos.CurrentRow.Cells[0].Value;
-        //    string nombreProducto = (string)dataGridProductos.CurrentRow.Cells[1].Value;
+        private void btnEditar_Click_1(object sender, EventArgs e)
+        {
+            int idProductoAModificar = (int)dataGridProductos.CurrentRow.Cells[0].Value;
+            NuevoEditarProductoView nuevoEditarProductoView = new NuevoEditarProductoView(idProductoAModificar);
+            nuevoEditarProductoView.ShowDialog();
+            CargarDatosAGrilla();
+        }
 
-        //    //mostramos un messagebox que pregunta "Estas seguro que desea borrarlo"
-        //    DialogResult respuesta = MessageBox.Show
-        //        (
-        //        $"Está seguro que quiere eliminar el producto {nombreProducto}?",
-        //        "Eliminar producto",
-        //        MessageBoxButtons.YesNo,
-        //        MessageBoxIcon.Question
-        //        );
+        private void btnEliminar_Click_1(object sender, EventArgs e)
+        {
+            int idProductoAEliminar = (int)dataGridProductos.CurrentRow.Cells[0].Value;
+            string nombreProducto = (string)dataGridProductos.CurrentRow.Cells[1].Value;
 
-        //    //si el usuario selecciono "SI" - enviamos a borrar el cliente utilizando el ID y la objeto Repo.
-        //    if (respuesta == DialogResult.Yes)
-        //    {
-        //        comand.CommandText = $"Delete from productos where id={idProductoAEliminar}";
-        //        comand.ExecuteNonQuery();
-        //        CargarDatosAGrilla();
-        //    }
+            //mostramos un messagebox que pregunta "Estas seguro que desea borrarlo"
+            DialogResult respuesta = MessageBox.Show
+                (
+                $"Está seguro que quiere eliminar el producto {nombreProducto}?",
+                "Eliminar producto",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question
+                );
 
-        //}
-        //private void button1_Click(object sender, EventArgs e)
-        //{
-        //    NuevoEditarProductoView nuevoEditarProductoView = new NuevoEditarProductoView();
-        //    nuevoEditarProductoView.ShowDialog();
-        //    CargarDatosAGrilla();
-        //}
+            //si el usuario selecciono "SI" - enviamos a borrar el cliente utilizando el ID y la objeto Repo.
+            if (respuesta == DialogResult.Yes)
+            {
+                comand.CommandText = $"Delete from productos where id={idProductoAEliminar}";
+                comand.ExecuteNonQuery();
+                CargarDatosAGrilla();
+            }
+        }
+
+        private void btnSalir_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
 
