@@ -32,29 +32,56 @@ namespace CiclismoDesktopPorCodigo.Views.New___Edit
             this.idProductoAModificar = idProductoAModificar;
             CargarDatosEnPantalla();
         }
-
         private void CargarDatosEnPantalla()
         {
             comand.CommandText = $"SELECT * FROM productos WHERE id={this.idProductoAModificar}";
-            var productoReader = comand.ExecuteReader();
-            if (productoReader != null)
+
+            using (var productoReader = comand.ExecuteReader())
             {
                 if (productoReader.Read())
                 {
-                    txtNombreProducto.Text = (string)productoReader["NombreProducto"];
-                    txtColorProducto.Text = (string)productoReader["Color"];
-                    txtTallaProducto.Text = (string)productoReader["Talla"];
-                    txtMFProducto.Text = (string)productoReader["M_F"];
+                    txtNombreProducto.Text = GetStringOrNull(productoReader, "NombreProducto");
+                    txtColorProducto.Text = GetStringOrNull(productoReader, "Color");
+                    txtTallaProducto.Text = GetStringOrNull(productoReader, "Talla");
+                    txtMFProducto.Text = GetStringOrNull(productoReader, "M_F");
 
                     // Valor Numerico
-                    numericUpDownPrecioProducto.Value = Convert.ToDecimal(productoReader["Precio"]);
+                    if (productoReader["Precio"] != DBNull.Value)
+                        numericUpDownPrecioProducto.Value = Convert.ToDecimal(productoReader["Precio"]);
 
-                    txtClaseProducto.Text = (string)productoReader["ClaseProducto"];
-                };
-
+                    txtClaseProducto.Text = GetStringOrNull(productoReader, "ClaseProducto");
+                }
             }
-            productoReader?.Close();
         }
+
+        private string GetStringOrNull(SqlDataReader reader, string columnName)
+        {
+            int columnIndex = reader.GetOrdinal(columnName);
+            return reader.IsDBNull(columnIndex) ? string.Empty : reader.GetString(columnIndex);
+        }
+
+        //private void CargarDatosEnPantalla()
+        //{
+        //    comand.CommandText = $"SELECT * FROM productos WHERE id={this.idProductoAModificar}";
+        //    var productoReader = comand.ExecuteReader();
+        //    if (productoReader != null)
+        //    {
+        //        if (productoReader.Read())
+        //        {
+        //            txtNombreProducto.Text = (string)productoReader["NombreProducto"];
+        //            txtColorProducto.Text = (string)productoReader["Color"];
+        //            txtTallaProducto.Text = (string)productoReader["Talla"];
+        //            txtMFProducto.Text = (string)productoReader["M_F"];
+
+        //            // Valor Numerico
+        //            numericUpDownPrecioProducto.Value = Convert.ToDecimal(productoReader["Precio"]);
+
+        //            txtClaseProducto.Text = (string)productoReader["ClaseProducto"];
+        //        };
+
+        //    }
+        //    productoReader?.Close();
+        //}
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {

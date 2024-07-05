@@ -47,7 +47,12 @@ namespace CiclismoDesktopPorCodigo.Views.New_Edit
                     txtTituloContacto.Text = (string)clienteReader["TituloContacto"];
                     txtCargoContacto.Text = (string)clienteReader["CargoContacto"];
                     txtGerenteDeCuenta.Text = (string)clienteReader["GerenteDeCuenta"];
-                    txtVentasAnioAnterior.Text = clienteReader["VentasAnioAnterior"].ToString();
+
+                    // Convertir VentasAnioAnterior a string solo si no es DBNull
+                    if (clienteReader["VentasAnioAnterior"] != DBNull.Value)
+                        txtVentasAnioAnterior.Text = ((decimal)clienteReader["VentasAnioAnterior"]).ToString();
+
+
                     txtDireccion1.Text = (string)clienteReader["Direccion1"];
                     txtDireccion2.Text = (string)clienteReader["Direccion2"];
                     txtCiudad.Text = (string)clienteReader["Ciudad"];
@@ -69,7 +74,15 @@ namespace CiclismoDesktopPorCodigo.Views.New_Edit
             string tituloContacto = txtTituloContacto.Text;
             string cargoContacto = txtCargoContacto.Text;
             string gerenteDeCuenta = txtGerenteDeCuenta.Text;
-            string ventasAnioAnterior = txtVentasAnioAnterior.Text;
+
+            // Obtener el valor numérico de VentasAnioAnterior
+            decimal ventasAnioAnterior = 0;
+            if (!decimal.TryParse(txtVentasAnioAnterior.Text, out ventasAnioAnterior))
+            {
+                MessageBox.Show("Ingrese un valor numérico válido para Ventas del Año Anterior.");
+                return;
+            }
+
             string direccion1 = txtDireccion1.Text;
             string direccion2 = txtDireccion2.Text;
             string ciudad = txtCiudad.Text;
