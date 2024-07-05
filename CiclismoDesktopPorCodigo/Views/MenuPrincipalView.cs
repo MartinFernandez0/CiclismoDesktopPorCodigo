@@ -31,5 +31,23 @@ namespace CiclismoDesktopPorCodigo
             ProductosView productosView = new ProductosView();
             productosView.ShowDialog();
         }
+
+        private void btnEmpleado_Click(object sender, EventArgs e)
+        {
+            ClientesView clientesView = new ClientesView();
+            clientesView.ShowDialog();
+        }
+
+        private void btnClientes_Click(object sender, EventArgs e)
+        {
+            ClientesView clientesView = new ClientesView();
+            clientesView.ShowDialog();
+        }
+
+        private void btnProductos_Click(object sender, EventArgs e)
+        {
+            ProductosView productosView = new ProductosView();
+            productosView.ShowDialog();
+        }
     }
 }
