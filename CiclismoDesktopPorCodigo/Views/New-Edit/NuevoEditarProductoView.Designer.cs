@@ -58,9 +58,9 @@
             label3.AutoSize = true;
             label3.Location = new Point(224, 134);
             label3.Name = "label3";
-            label3.Size = new Size(42, 15);
+            label3.Size = new Size(33, 15);
             label3.TabIndex = 44;
-            label3.Text = "Cargo:";
+            label3.Text = "Talla:";
             // 
             // txtColorProducto
             // 
@@ -73,11 +73,11 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(216, 85);
+            label2.Location = new Point(224, 85);
             label2.Name = "label2";
-            label2.Size = new Size(54, 15);
+            label2.Size = new Size(39, 15);
             label2.TabIndex = 42;
-            label2.Text = "Nombre:";
+            label2.Text = "Color:";
             // 
             // txtNombreProducto
             // 
@@ -90,11 +90,11 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(216, 32);
+            label1.Location = new Point(183, 32);
             label1.Name = "label1";
-            label1.Size = new Size(54, 15);
+            label1.Size = new Size(125, 15);
             label1.TabIndex = 40;
-            label1.Text = "Apellido:";
+            label1.Text = "Nombre del producto:";
             // 
             // txtClaseProducto
             // 
@@ -107,20 +107,20 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(224, 283);
+            label4.Location = new Point(198, 282);
             label4.Name = "label4";
-            label4.Size = new Size(42, 15);
+            label4.Size = new Size(90, 15);
             label4.TabIndex = 50;
-            label4.Text = "Cargo:";
+            label4.Text = "Clase Producto:";
             // 
             // label5
             // 
             label5.AutoSize = true;
             label5.Location = new Point(216, 234);
             label5.Name = "label5";
-            label5.Size = new Size(54, 15);
+            label5.Size = new Size(52, 15);
             label5.TabIndex = 48;
-            label5.Text = "Nombre:";
+            label5.Text = "Precio $:";
             // 
             // txtMFProducto
             // 
@@ -133,11 +133,11 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(216, 181);
+            label6.Location = new Point(224, 181);
             label6.Name = "label6";
-            label6.Size = new Size(54, 15);
+            label6.Size = new Size(36, 15);
             label6.TabIndex = 46;
-            label6.Text = "Apellido:";
+            label6.Text = "M y F";
             // 
             // btnCancelar
             // 
