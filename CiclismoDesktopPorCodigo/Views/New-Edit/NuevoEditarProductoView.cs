@@ -63,6 +63,7 @@ namespace CiclismoDesktopPorCodigo.Views.New___Edit
             string tallaProducto = txtTallaProducto.Text;
             string M_FProducto = txtMFProducto.Text;
 
+
             // Obtener el valor numérico del NumericUpDown
             decimal precioProducto = numericUpDownPrecioProducto.Value;
 

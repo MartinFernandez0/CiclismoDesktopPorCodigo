@@ -42,9 +42,58 @@ namespace CiclismoDesktopPorCodigo.Views.New_Edit
                 if (clienteReader.Read())
                 {
                     txtNombre.Text = (string)clienteReader["Nombre"];
+                    txtNombreContacto.Text = (string)clienteReader["NombreContacto"];
+                    txtApellidoContacto.Text = (string)clienteReader["ApellidoContacto"];
+                    txtTituloContacto.Text = (string)clienteReader["TituloContacto"];
+                    txtCargoContacto.Text = (string)clienteReader["CargoContacto"];
+                    txtGerenteDeCuenta.Text = (string)clienteReader["GerenteDeCuenta"];
+                    txtVentasAnioAnterior.Text = clienteReader["VentasAnioAnterior"].ToString();
+                    txtDireccion1.Text = (string)clienteReader["Direccion1"];
+                    txtDireccion2.Text = (string)clienteReader["Direccion2"];
+                    txtCiudad.Text = (string)clienteReader["Ciudad"];
+                    txtRegion.Text = (string)clienteReader["Region"];
+                    txtPais.Text = (string)clienteReader["Pais"];
+                    txtCodigoPostal.Text = (string)clienteReader["CodigoPostal"];
+                    txtTelefono.Text = (string)clienteReader["Telefono"];
+                    txtFax.Text = (string)clienteReader["Fax"];
                 };
             }
             clienteReader?.Close();
+        }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            string nombreCliente = txtNombre.Text;
+            string nombreContacto = txtNombreContacto.Text;
+            string apellidoContacto = txtApellidoContacto.Text;
+            string tituloContacto = txtTituloContacto.Text;
+            string cargoContacto = txtCargoContacto.Text;
+            string gerenteDeCuenta = txtGerenteDeCuenta.Text;
+            string ventasAnioAnterior = txtVentasAnioAnterior.Text;
+            string direccion1 = txtDireccion1.Text;
+            string direccion2 = txtDireccion2.Text;
+            string ciudad = txtCiudad.Text;
+            string region = txtRegion.Text;
+            string pais = txtPais.Text;
+            string codigoPostal = txtCodigoPostal.Text;
+            string telefono = txtTelefono.Text;
+            string fax = txtFax.Text;
+
+            if (idClienteAModificar == null)
+            {
+                comand.CommandText = $"INSERT INTO clientes (Nombre, NombreContacto, ApellidoContacto, TituloContacto, CargoContacto, GerenteDeCuenta, VentasAnioAnterior, Direccion1, Direccion2, Ciudad, Region, Pais, CodigoPostal, Telefono, Fax) VALUES ('{nombreCliente}','{nombreContacto}','{apellidoContacto}','{tituloContacto}','{cargoContacto}','{gerenteDeCuenta}','{ventasAnioAnterior}','{direccion1}','{direccion2}','{ciudad}','{region}','{pais}','{codigoPostal}','{telefono}','{fax}')";
+            }
+            else
+            {
+                comand.CommandText = $"UPDATE clientes SET Nombre='{nombreCliente}', NombreContacto='{nombreContacto}', ApellidoContacto='{apellidoContacto}', TituloContacto='{tituloContacto}', CargoContacto='{cargoContacto}', GerenteDeCuenta='{gerenteDeCuenta}', VentasAnioAnterior='{ventasAnioAnterior}', Direccion1='{direccion1}', Direccion2='{direccion2}', Ciudad='{ciudad}', Region='{region}', Pais='{pais}', CodigoPostal='{codigoPostal}', Telefono='{telefono}', Fax='{fax}' WHERE id={this.idClienteAModificar}";
+            }
+            comand.ExecuteNonQuery();
+            this.Close();
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
