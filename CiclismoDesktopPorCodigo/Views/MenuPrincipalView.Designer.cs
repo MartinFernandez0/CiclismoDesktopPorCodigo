@@ -102,36 +102,43 @@
             // 
             // pictureBox1
             // 
+            pictureBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
+            pictureBox1.BackColor = Color.Transparent;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(114, 67);
+            pictureBox1.Location = new Point(103, 67);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(80, 135);
+            pictureBox1.Size = new Size(94, 149);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
             // 
             // pictureBox2
             // 
+            pictureBox2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
+            pictureBox2.BackColor = Color.Transparent;
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(293, 12);
+            pictureBox2.Location = new Point(290, 55);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(186, 254);
+            pictureBox2.Size = new Size(207, 161);
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox2.TabIndex = 2;
             pictureBox2.TabStop = false;
             // 
             // pictureBox3
             // 
+            pictureBox3.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
+            pictureBox3.BackColor = Color.Transparent;
             pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(554, 67);
+            pictureBox3.Location = new Point(546, 55);
             pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(80, 135);
+            pictureBox3.Size = new Size(96, 149);
             pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox3.TabIndex = 3;
             pictureBox3.TabStop = false;
             // 
             // btnEmpleado
             // 
+            btnEmpleado.Anchor = AnchorStyles.Bottom;
             btnEmpleado.Location = new Point(94, 222);
             btnEmpleado.Name = "btnEmpleado";
             btnEmpleado.Size = new Size(114, 44);
@@ -142,6 +149,7 @@
             // 
             // btnClientes
             // 
+            btnClientes.Anchor = AnchorStyles.Bottom;
             btnClientes.Location = new Point(329, 222);
             btnClientes.Name = "btnClientes";
             btnClientes.Size = new Size(114, 44);
@@ -152,6 +160,7 @@
             // 
             // btnProductos
             // 
+            btnProductos.Anchor = AnchorStyles.Bottom;
             btnProductos.Location = new Point(538, 222);
             btnProductos.Name = "btnProductos";
             btnProductos.Size = new Size(114, 44);
@@ -162,6 +171,7 @@
             // 
             // button1
             // 
+            button1.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             button1.Location = new Point(662, 394);
             button1.Name = "button1";
             button1.Size = new Size(114, 44);
@@ -174,6 +184,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(788, 450);
             Controls.Add(button1);
             Controls.Add(btnProductos);
@@ -185,7 +196,7 @@
             Controls.Add(menuStrip1);
             MainMenuStrip = menuStrip1;
             Name = "MenuPrincipalView";
-            StartPosition = FormStartPosition.CenterParent;
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Ciclismo Desktop por code";
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();

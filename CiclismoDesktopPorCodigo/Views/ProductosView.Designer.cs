@@ -28,20 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProductosView));
             dataGridProductos = new DataGridView();
             btnSalir = new Button();
             btnEliminar = new Button();
             btnEditar = new Button();
             button1 = new Button();
+            pictureBox4 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)dataGridProductos).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             SuspendLayout();
             // 
             // dataGridProductos
             // 
             dataGridProductos.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            dataGridProductos.BackgroundColor = SystemColors.GradientActiveCaption;
             dataGridProductos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridProductos.Location = new Point(60, 53);
             dataGridProductos.Name = "dataGridProductos";
+            dataGridProductos.ReadOnly = true;
             dataGridProductos.Size = new Size(681, 278);
             dataGridProductos.TabIndex = 19;
             // 
@@ -52,7 +57,7 @@
             btnSalir.Name = "btnSalir";
             btnSalir.Size = new Size(93, 41);
             btnSalir.TabIndex = 24;
-            btnSalir.Text = "Salir";
+            btnSalir.Text = "Atras";
             btnSalir.UseVisualStyleBackColor = true;
             btnSalir.Click += btnSalir_Click_1;
             // 
@@ -89,20 +94,35 @@
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
+            // pictureBox4
+            // 
+            pictureBox4.Anchor = AnchorStyles.Bottom;
+            pictureBox4.BackColor = Color.Transparent;
+            pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
+            pictureBox4.Location = new Point(500, 349);
+            pictureBox4.Name = "pictureBox4";
+            pictureBox4.Size = new Size(67, 103);
+            pictureBox4.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox4.TabIndex = 61;
+            pictureBox4.TabStop = false;
+            // 
             // ProductosView
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(800, 450);
+            Controls.Add(pictureBox4);
             Controls.Add(btnSalir);
             Controls.Add(btnEliminar);
             Controls.Add(btnEditar);
             Controls.Add(button1);
             Controls.Add(dataGridProductos);
             Name = "ProductosView";
-            StartPosition = FormStartPosition.CenterParent;
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Gestion Productos";
             ((System.ComponentModel.ISupportInitialize)dataGridProductos).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ResumeLayout(false);
         }
 
@@ -113,5 +133,6 @@
         private Button btnEliminar;
         private Button btnEditar;
         private Button button1;
+        private PictureBox pictureBox4;
     }
 }
