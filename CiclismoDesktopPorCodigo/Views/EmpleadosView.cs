@@ -61,7 +61,7 @@ namespace CiclismoDesktopPorCodigo.Views
             //si el usuario selecciono "SI" - enviamos a borrar el empleado utilizando el ID y la objeto Repo.
             if (respuesta == DialogResult.Yes)
             {
-                comand.CommandText = $"Delete from empleado where id={idEmpleadoAEliminar}";
+                comand.CommandText = $"Delete from empleados where id={idEmpleadoAEliminar}";
                 comand.ExecuteNonQuery();
                 CargarDatosAGrilla();
             }

@@ -35,6 +35,14 @@ namespace CiclismoDesktopPorCodigo.Views
             productosTable.Load(productosReader);
 
             dataGridProductos.DataSource = productosTable;
+
+            // Configurar el formato de la columna de Precio
+            if (dataGridProductos.Columns.Contains("Precio"))
+            {
+                dataGridProductos.Columns["Precio"].DefaultCellStyle.Format = "N2";
+            }
+
+            productosReader.Close();
         }
 
         private void button1_Click(object sender, EventArgs e)

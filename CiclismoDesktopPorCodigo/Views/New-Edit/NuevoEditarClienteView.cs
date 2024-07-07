@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace CiclismoDesktopPorCodigo.Views.New_Edit
 {
-    public partial class NuevoEditarClienteView : Form
+public partial class NuevoEditarClienteView : Form
     {
         SqlCommand comand = new SqlCommand();
         private int idClienteAModificar;
@@ -48,10 +48,9 @@ namespace CiclismoDesktopPorCodigo.Views.New_Edit
                     txtCargoContacto.Text = (string)clienteReader["CargoContacto"];
                     txtGerenteDeCuenta.Text = (string)clienteReader["GerenteDeCuenta"];
 
-                    // Convertir VentasAnioAnterior a string solo si no es DBNull
+                    // Convertir VentasAnioAnterior a string solo si no es DBNull y formatear a dos decimales
                     if (clienteReader["VentasAnioAnterior"] != DBNull.Value)
-                        txtVentasAnioAnterior.Text = ((decimal)clienteReader["VentasAnioAnterior"]).ToString();
-
+                        txtVentasAnioAnterior.Text = ((decimal)clienteReader["VentasAnioAnterior"]).ToString("F2");
 
                     txtDireccion1.Text = (string)clienteReader["Direccion1"];
                     txtDireccion2.Text = (string)clienteReader["Direccion2"];
@@ -61,7 +60,7 @@ namespace CiclismoDesktopPorCodigo.Views.New_Edit
                     txtCodigoPostal.Text = (string)clienteReader["CodigoPostal"];
                     txtTelefono.Text = (string)clienteReader["Telefono"];
                     txtFax.Text = (string)clienteReader["Fax"];
-                };
+                }
             }
             clienteReader?.Close();
         }
@@ -92,7 +91,7 @@ namespace CiclismoDesktopPorCodigo.Views.New_Edit
             string telefono = txtTelefono.Text;
             string fax = txtFax.Text;
 
-            if (idClienteAModificar == null)
+            if (idClienteAModificar == 0) // Verifica si el idClienteAModificar no está definido
             {
                 comand.CommandText = $"INSERT INTO clientes (Nombre, NombreContacto, ApellidoContacto, TituloContacto, CargoContacto, GerenteDeCuenta, VentasAnioAnterior, Direccion1, Direccion2, Ciudad, Region, Pais, CodigoPostal, Telefono, Fax) VALUES ('{nombreCliente}','{nombreContacto}','{apellidoContacto}','{tituloContacto}','{cargoContacto}','{gerenteDeCuenta}','{ventasAnioAnterior}','{direccion1}','{direccion2}','{ciudad}','{region}','{pais}','{codigoPostal}','{telefono}','{fax}')";
             }

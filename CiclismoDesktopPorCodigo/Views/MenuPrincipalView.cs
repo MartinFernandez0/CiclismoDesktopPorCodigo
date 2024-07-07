@@ -34,8 +34,8 @@ namespace CiclismoDesktopPorCodigo
 
         private void btnEmpleado_Click(object sender, EventArgs e)
         {
-            ClientesView clientesView = new ClientesView();
-            clientesView.ShowDialog();
+            EmpleadosView empleadosView = new EmpleadosView();
+            empleadosView.ShowDialog();
         }
 
         private void btnClientes_Click(object sender, EventArgs e)
@@ -48,6 +48,11 @@ namespace CiclismoDesktopPorCodigo
         {
             ProductosView productosView = new ProductosView();
             productosView.ShowDialog();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

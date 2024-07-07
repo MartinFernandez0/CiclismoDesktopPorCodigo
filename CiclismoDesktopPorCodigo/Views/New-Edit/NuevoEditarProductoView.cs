@@ -30,26 +30,38 @@ namespace CiclismoDesktopPorCodigo.Views.New___Edit
             comand.Connection = Helper.CrearConexion();
 
             this.idProductoAModificar = idProductoAModificar;
+
+            numericUpDownPrecioProducto.DecimalPlaces = 2;
+            numericUpDownPrecioProducto.Minimum = 0;
+            numericUpDownPrecioProducto.Maximum = 9999999999.99M;
+            numericUpDownPrecioProducto.Increment = 0.01M;
+
+
             CargarDatosEnPantalla();
         }
+
         private void CargarDatosEnPantalla()
         {
-            comand.CommandText = $"SELECT * FROM productos WHERE id={this.idProductoAModificar}";
-
-            using (var productoReader = comand.ExecuteReader())
+            if (idProductoAModificar.HasValue)
             {
-                if (productoReader.Read())
+                comand.CommandText = $"SELECT * FROM productos WHERE id=@IdProducto";
+                comand.Parameters.AddWithValue("@IdProducto", idProductoAModificar);
+
+                using (var productoReader = comand.ExecuteReader())
                 {
-                    txtNombreProducto.Text = GetStringOrNull(productoReader, "NombreProducto");
-                    txtColorProducto.Text = GetStringOrNull(productoReader, "Color");
-                    txtTallaProducto.Text = GetStringOrNull(productoReader, "Talla");
-                    txtMFProducto.Text = GetStringOrNull(productoReader, "M_F");
+                    if (productoReader.Read())
+                    {
+                        txtNombreProducto.Text = GetStringOrNull(productoReader, "NombreProducto");
+                        txtColorProducto.Text = GetStringOrNull(productoReader, "Color");
+                        txtTallaProducto.Text = GetStringOrNull(productoReader, "Talla");
+                        txtMFProducto.Text = GetStringOrNull(productoReader, "M_F");
 
-                    // Valor Numerico
-                    if (productoReader["Precio"] != DBNull.Value)
-                        numericUpDownPrecioProducto.Value = Convert.ToDecimal(productoReader["Precio"]);
+                        // Valor Numerico
+                        if (productoReader["Precio"] != DBNull.Value)
+                            numericUpDownPrecioProducto.Value = Convert.ToDecimal(productoReader["Precio"]);
 
-                    txtClaseProducto.Text = GetStringOrNull(productoReader, "ClaseProducto");
+                        txtClaseProducto.Text = GetStringOrNull(productoReader, "ClaseProducto");
+                    }
                 }
             }
         }
@@ -60,29 +72,6 @@ namespace CiclismoDesktopPorCodigo.Views.New___Edit
             return reader.IsDBNull(columnIndex) ? string.Empty : reader.GetString(columnIndex);
         }
 
-        //private void CargarDatosEnPantalla()
-        //{
-        //    comand.CommandText = $"SELECT * FROM productos WHERE id={this.idProductoAModificar}";
-        //    var productoReader = comand.ExecuteReader();
-        //    if (productoReader != null)
-        //    {
-        //        if (productoReader.Read())
-        //        {
-        //            txtNombreProducto.Text = (string)productoReader["NombreProducto"];
-        //            txtColorProducto.Text = (string)productoReader["Color"];
-        //            txtTallaProducto.Text = (string)productoReader["Talla"];
-        //            txtMFProducto.Text = (string)productoReader["M_F"];
-
-        //            // Valor Numerico
-        //            numericUpDownPrecioProducto.Value = Convert.ToDecimal(productoReader["Precio"]);
-
-        //            txtClaseProducto.Text = (string)productoReader["ClaseProducto"];
-        //        };
-
-        //    }
-        //    productoReader?.Close();
-        //}
-
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             string nombreProducto = txtNombreProducto.Text;
@@ -90,22 +79,45 @@ namespace CiclismoDesktopPorCodigo.Views.New___Edit
             string tallaProducto = txtTallaProducto.Text;
             string M_FProducto = txtMFProducto.Text;
 
-
-            // Obtener el valor numérico del NumericUpDown
             decimal precioProducto = numericUpDownPrecioProducto.Value;
+
 
             string claseProducto = txtClaseProducto.Text;
 
-            if (idProductoAModificar == null)
+            try
             {
-                comand.CommandText = $"INSERT INTO productos (NombreProducto, Color, Talla, M_F, Precio,ClaseProducto) VALUES ('{nombreProducto}','{colorProducto}','{tallaProducto}','{M_FProducto}','{precioProducto}','{claseProducto}')";
+                comand.Parameters.Clear();
+
+                if (!idProductoAModificar.HasValue)
+                {
+                    comand.CommandText = "INSERT INTO productos (NombreProducto, Color, Talla, M_F, Precio, ClaseProducto) " +
+                                         "VALUES (@NombreProducto, @Color, @Talla, @M_F, @Precio, @ClaseProducto)";
+                    comand.Parameters.AddWithValue("@IdProducto", DBNull.Value); // Agregar el parámetro IdProducto con valor DBNull para la inserción
+                }
+                else
+                {
+                    comand.CommandText = "UPDATE productos " +
+                                         "SET NombreProducto = @NombreProducto, Color = @Color, Talla = @Talla, " +
+                                         "M_F = @M_F, Precio = @Precio, ClaseProducto = @ClaseProducto " +
+                                         "WHERE id = @IdProducto";
+                    comand.Parameters.AddWithValue("@IdProducto", idProductoAModificar); // Agregar el parámetro IdProducto con su valor para la actualización
+                }
+
+
+                comand.Parameters.AddWithValue("@NombreProducto", nombreProducto);
+                comand.Parameters.AddWithValue("@Color", colorProducto);
+                comand.Parameters.AddWithValue("@Talla", tallaProducto);
+                comand.Parameters.AddWithValue("@M_F", M_FProducto);
+                comand.Parameters.AddWithValue("@Precio", precioProducto);
+                comand.Parameters.AddWithValue("@ClaseProducto", claseProducto);
+
+                comand.ExecuteNonQuery();
+                this.Close();
             }
-            else
+            catch (Exception ex)
             {
-                comand.CommandText = $"UPDATE productos SET NombreProducto='{nombreProducto}',Color='{colorProducto}', Talla='{tallaProducto}', M_F='{M_FProducto}', Precio='{precioProducto}',ClaseProducto='{claseProducto}' WHERE id={this.idProductoAModificar}";
+                MessageBox.Show($"Error al guardar el producto: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            comand.ExecuteNonQuery();
-            this.Close();
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)

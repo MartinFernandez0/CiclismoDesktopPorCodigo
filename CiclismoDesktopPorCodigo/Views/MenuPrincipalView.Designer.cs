@@ -162,12 +162,13 @@
             // 
             // button1
             // 
-            button1.Location = new Point(674, 394);
+            button1.Location = new Point(662, 394);
             button1.Name = "button1";
             button1.Size = new Size(114, 44);
             button1.TabIndex = 57;
             button1.Text = "Exit";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // MenuPrincipalView
             // 

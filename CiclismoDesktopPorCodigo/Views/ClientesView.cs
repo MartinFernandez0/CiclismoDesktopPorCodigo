@@ -36,6 +36,14 @@ namespace CiclismoDesktopPorCodigo.Views
             clienteTable.Load(clientesReader);
 
             dataGridClientes.DataSource = clienteTable;
+
+            // Configurar el formato de la columna de Precio
+            if (dataGridClientes.Columns.Contains("VentasAnioAnterior"))
+            {
+                dataGridClientes.Columns["VentasAnioAnterior"].DefaultCellStyle.Format = "N2";
+            }
+
+            clientesReader.Close();
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)

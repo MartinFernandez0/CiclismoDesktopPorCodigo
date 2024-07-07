@@ -162,6 +162,7 @@
             // numericUpDownPrecioProducto
             // 
             numericUpDownPrecioProducto.Location = new Point(183, 252);
+            numericUpDownPrecioProducto.Maximum = new decimal(new int[] { 1410065407, 2, 0, 0 });
             numericUpDownPrecioProducto.Name = "numericUpDownPrecioProducto";
             numericUpDownPrecioProducto.Size = new Size(120, 23);
             numericUpDownPrecioProducto.TabIndex = 54;
