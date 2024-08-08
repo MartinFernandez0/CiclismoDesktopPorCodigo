@@ -43,6 +43,8 @@
             btnClientes = new Button();
             btnProductos = new Button();
             button1 = new Button();
+            btnTipoProducto = new Button();
+            gestionarClientesStoredProcedureToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
@@ -60,7 +62,7 @@
             // 
             // principalToolStripMenuItem
             // 
-            principalToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { gestionarClientesToolStripMenuItem, gestionarEmpleadosToolStripMenuItem, gestionarProductosToolStripMenuItem });
+            principalToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { gestionarClientesToolStripMenuItem, gestionarEmpleadosToolStripMenuItem, gestionarProductosToolStripMenuItem, gestionarClientesStoredProcedureToolStripMenuItem });
             principalToolStripMenuItem.Name = "principalToolStripMenuItem";
             principalToolStripMenuItem.Size = new Size(65, 20);
             principalToolStripMenuItem.Text = "Principal";
@@ -68,21 +70,21 @@
             // gestionarClientesToolStripMenuItem
             // 
             gestionarClientesToolStripMenuItem.Name = "gestionarClientesToolStripMenuItem";
-            gestionarClientesToolStripMenuItem.Size = new Size(185, 22);
+            gestionarClientesToolStripMenuItem.Size = new Size(271, 22);
             gestionarClientesToolStripMenuItem.Text = "Gestionar Clientes";
             gestionarClientesToolStripMenuItem.Click += gestionarClientesToolStripMenuItem_Click;
             // 
             // gestionarEmpleadosToolStripMenuItem
             // 
             gestionarEmpleadosToolStripMenuItem.Name = "gestionarEmpleadosToolStripMenuItem";
-            gestionarEmpleadosToolStripMenuItem.Size = new Size(185, 22);
+            gestionarEmpleadosToolStripMenuItem.Size = new Size(271, 22);
             gestionarEmpleadosToolStripMenuItem.Text = "Gestionar Empleados";
             gestionarEmpleadosToolStripMenuItem.Click += gestionarEmpleadosToolStripMenuItem_Click;
             // 
             // gestionarProductosToolStripMenuItem
             // 
             gestionarProductosToolStripMenuItem.Name = "gestionarProductosToolStripMenuItem";
-            gestionarProductosToolStripMenuItem.Size = new Size(185, 22);
+            gestionarProductosToolStripMenuItem.Size = new Size(271, 22);
             gestionarProductosToolStripMenuItem.Text = "Gestionar Productos";
             gestionarProductosToolStripMenuItem.Click += gestionarProductosToolStripMenuItem_Click;
             // 
@@ -180,12 +182,31 @@
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
+            // btnTipoProducto
+            // 
+            btnTipoProducto.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            btnTipoProducto.Location = new Point(538, 272);
+            btnTipoProducto.Name = "btnTipoProducto";
+            btnTipoProducto.Size = new Size(118, 26);
+            btnTipoProducto.TabIndex = 63;
+            btnTipoProducto.Text = "&Tipo de Productos";
+            btnTipoProducto.UseVisualStyleBackColor = true;
+            btnTipoProducto.Click += btnTipoProducto_Click;
+            // 
+            // gestionarClientesStoredProcedureToolStripMenuItem
+            // 
+            gestionarClientesStoredProcedureToolStripMenuItem.Name = "gestionarClientesStoredProcedureToolStripMenuItem";
+            gestionarClientesStoredProcedureToolStripMenuItem.Size = new Size(271, 22);
+            gestionarClientesStoredProcedureToolStripMenuItem.Text = "Gestionar Clientes (Stored Procedure)";
+            gestionarClientesStoredProcedureToolStripMenuItem.Click += gestionarClientesStoredProcedureToolStripMenuItem_Click;
+            // 
             // MenuPrincipalView
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(788, 450);
+            Controls.Add(btnTipoProducto);
             Controls.Add(button1);
             Controls.Add(btnProductos);
             Controls.Add(btnClientes);
@@ -223,5 +244,7 @@
         private Button btnClientes;
         private Button btnProductos;
         private Button button1;
+        private Button btnTipoProducto;
+        private ToolStripMenuItem gestionarClientesStoredProcedureToolStripMenuItem;
     }
 }
