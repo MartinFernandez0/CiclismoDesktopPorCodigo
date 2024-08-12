@@ -95,6 +95,8 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackgroundImage = Properties.Resources.pexels_alscre_28476481;
+            BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(471, 450);
             Controls.Add(btnSalir);
             Controls.Add(btnEliminar);

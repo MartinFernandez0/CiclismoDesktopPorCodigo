@@ -82,6 +82,7 @@
             btnEditar.TabIndex = 11;
             btnEditar.Text = "&Editar";
             btnEditar.UseVisualStyleBackColor = true;
+            btnEditar.Click += btnEditar_Click;
             // 
             // btnAgregar
             // 
@@ -92,6 +93,7 @@
             btnAgregar.TabIndex = 12;
             btnAgregar.Text = "&Agregar";
             btnAgregar.UseVisualStyleBackColor = true;
+            btnAgregar.Click += btnAgregar_Click;
             // 
             // dataGridClientes
             // 
@@ -108,6 +110,8 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackgroundImage = Properties.Resources.pexels_alscre_28476481;
+            BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(800, 450);
             Controls.Add(dataGridClientes);
             Controls.Add(pictureBox2);

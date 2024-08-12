@@ -1,4 +1,5 @@
 ﻿using CiclismoDesktopPorCodigo.Utils;
+using CiclismoDesktopPorCodigo.Views.New_Edit;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -68,6 +69,21 @@ namespace CiclismoDesktopPorCodigo.Views
         private void btnSalir_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            NuevoEditarClienteView nuevoEditarClienteView = new NuevoEditarClienteView();
+            nuevoEditarClienteView.ShowDialog();
+            CargarDatosAGrilla();
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            int idClienteAModificar = (int)dataGridClientes.CurrentRow.Cells[0].Value;
+            NuevoEditarClienteView nuevoEditarClienteView = new NuevoEditarClienteView(idClienteAModificar);
+            nuevoEditarClienteView.ShowDialog();
+            CargarDatosAGrilla();
         }
     }
 }

@@ -34,6 +34,7 @@
             gestionarClientesToolStripMenuItem = new ToolStripMenuItem();
             gestionarEmpleadosToolStripMenuItem = new ToolStripMenuItem();
             gestionarProductosToolStripMenuItem = new ToolStripMenuItem();
+            gestionarClientesStoredProcedureToolStripMenuItem = new ToolStripMenuItem();
             salirToolStripMenuItem = new ToolStripMenuItem();
             salirDelSistemaToolStripMenuItem = new ToolStripMenuItem();
             pictureBox1 = new PictureBox();
@@ -44,7 +45,6 @@
             btnProductos = new Button();
             button1 = new Button();
             btnTipoProducto = new Button();
-            gestionarClientesStoredProcedureToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
@@ -87,6 +87,13 @@
             gestionarProductosToolStripMenuItem.Size = new Size(271, 22);
             gestionarProductosToolStripMenuItem.Text = "Gestionar Productos";
             gestionarProductosToolStripMenuItem.Click += gestionarProductosToolStripMenuItem_Click;
+            // 
+            // gestionarClientesStoredProcedureToolStripMenuItem
+            // 
+            gestionarClientesStoredProcedureToolStripMenuItem.Name = "gestionarClientesStoredProcedureToolStripMenuItem";
+            gestionarClientesStoredProcedureToolStripMenuItem.Size = new Size(271, 22);
+            gestionarClientesStoredProcedureToolStripMenuItem.Text = "Gestionar Clientes (Stored Procedure)";
+            gestionarClientesStoredProcedureToolStripMenuItem.Click += gestionarClientesStoredProcedureToolStripMenuItem_Click;
             // 
             // salirToolStripMenuItem
             // 
@@ -141,70 +148,76 @@
             // btnEmpleado
             // 
             btnEmpleado.Anchor = AnchorStyles.Bottom;
+            btnEmpleado.BackColor = Color.MediumSeaGreen;
+            btnEmpleado.Font = new Font("Segoe UI", 10F);
             btnEmpleado.Location = new Point(94, 222);
             btnEmpleado.Name = "btnEmpleado";
-            btnEmpleado.Size = new Size(114, 44);
+            btnEmpleado.Size = new Size(114, 51);
             btnEmpleado.TabIndex = 54;
             btnEmpleado.Text = "Empleados";
-            btnEmpleado.UseVisualStyleBackColor = true;
+            btnEmpleado.UseVisualStyleBackColor = false;
             btnEmpleado.Click += btnEmpleado_Click;
             // 
             // btnClientes
             // 
             btnClientes.Anchor = AnchorStyles.Bottom;
+            btnClientes.BackColor = Color.MediumSeaGreen;
+            btnClientes.Font = new Font("Segoe UI", 10F);
             btnClientes.Location = new Point(329, 222);
             btnClientes.Name = "btnClientes";
-            btnClientes.Size = new Size(114, 44);
+            btnClientes.Size = new Size(114, 51);
             btnClientes.TabIndex = 55;
             btnClientes.Text = "Clientes";
-            btnClientes.UseVisualStyleBackColor = true;
+            btnClientes.UseVisualStyleBackColor = false;
             btnClientes.Click += btnClientes_Click;
             // 
             // btnProductos
             // 
             btnProductos.Anchor = AnchorStyles.Bottom;
+            btnProductos.BackColor = Color.MediumSeaGreen;
+            btnProductos.Font = new Font("Segoe UI", 10F);
             btnProductos.Location = new Point(538, 222);
             btnProductos.Name = "btnProductos";
-            btnProductos.Size = new Size(114, 44);
+            btnProductos.Size = new Size(114, 51);
             btnProductos.TabIndex = 56;
             btnProductos.Text = "Productos";
-            btnProductos.UseVisualStyleBackColor = true;
+            btnProductos.UseVisualStyleBackColor = false;
             btnProductos.Click += btnProductos_Click;
             // 
             // button1
             // 
             button1.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            button1.BackColor = Color.DarkCyan;
+            button1.Font = new Font("Segoe UI", 10F);
+            button1.ForeColor = SystemColors.ActiveCaptionText;
             button1.Location = new Point(662, 394);
             button1.Name = "button1";
             button1.Size = new Size(114, 44);
             button1.TabIndex = 57;
             button1.Text = "Exit";
-            button1.UseVisualStyleBackColor = true;
+            button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
             // btnTipoProducto
             // 
             btnTipoProducto.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            btnTipoProducto.Location = new Point(538, 272);
+            btnTipoProducto.BackColor = Color.MediumSeaGreen;
+            btnTipoProducto.Font = new Font("Segoe UI", 10F);
+            btnTipoProducto.Location = new Point(538, 279);
             btnTipoProducto.Name = "btnTipoProducto";
-            btnTipoProducto.Size = new Size(118, 26);
+            btnTipoProducto.Size = new Size(114, 51);
             btnTipoProducto.TabIndex = 63;
-            btnTipoProducto.Text = "&Tipo de Productos";
-            btnTipoProducto.UseVisualStyleBackColor = true;
+            btnTipoProducto.Text = "&Tipo";
+            btnTipoProducto.UseVisualStyleBackColor = false;
             btnTipoProducto.Click += btnTipoProducto_Click;
-            // 
-            // gestionarClientesStoredProcedureToolStripMenuItem
-            // 
-            gestionarClientesStoredProcedureToolStripMenuItem.Name = "gestionarClientesStoredProcedureToolStripMenuItem";
-            gestionarClientesStoredProcedureToolStripMenuItem.Size = new Size(271, 22);
-            gestionarClientesStoredProcedureToolStripMenuItem.Text = "Gestionar Clientes (Stored Procedure)";
-            gestionarClientesStoredProcedureToolStripMenuItem.Click += gestionarClientesStoredProcedureToolStripMenuItem_Click;
             // 
             // MenuPrincipalView
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackColor = SystemColors.ControlLightLight;
+            BackgroundImage = Properties.Resources.pexels_alscre_28476481;
+            BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(788, 450);
             Controls.Add(btnTipoProducto);
             Controls.Add(button1);

@@ -59,5 +59,25 @@ namespace CiclismoDesktopPorCodigo.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pexels_alscre_2847648 {
+            get {
+                object obj = ResourceManager.GetObject("pexels-alscre-2847648", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pexels_alscre_28476481 {
+            get {
+                object obj = ResourceManager.GetObject("pexels-alscre-28476481", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

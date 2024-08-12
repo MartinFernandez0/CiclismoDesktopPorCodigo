@@ -47,7 +47,7 @@
             // 
             // txtTallaProducto
             // 
-            txtTallaProducto.Location = new Point(142, 151);
+            txtTallaProducto.Location = new Point(58, 146);
             txtTallaProducto.Multiline = true;
             txtTallaProducto.Name = "txtTallaProducto";
             txtTallaProducto.Size = new Size(211, 23);
@@ -56,7 +56,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(224, 134);
+            label3.Location = new Point(140, 129);
             label3.Name = "label3";
             label3.Size = new Size(33, 15);
             label3.TabIndex = 44;
@@ -64,7 +64,7 @@
             // 
             // txtColorProducto
             // 
-            txtColorProducto.Location = new Point(142, 103);
+            txtColorProducto.Location = new Point(58, 98);
             txtColorProducto.Multiline = true;
             txtColorProducto.Name = "txtColorProducto";
             txtColorProducto.Size = new Size(211, 23);
@@ -73,7 +73,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(224, 85);
+            label2.Location = new Point(140, 80);
             label2.Name = "label2";
             label2.Size = new Size(39, 15);
             label2.TabIndex = 42;
@@ -81,7 +81,7 @@
             // 
             // txtNombreProducto
             // 
-            txtNombreProducto.Location = new Point(142, 50);
+            txtNombreProducto.Location = new Point(58, 45);
             txtNombreProducto.Multiline = true;
             txtNombreProducto.Name = "txtNombreProducto";
             txtNombreProducto.Size = new Size(211, 23);
@@ -90,7 +90,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(183, 32);
+            label1.Location = new Point(99, 27);
             label1.Name = "label1";
             label1.Size = new Size(125, 15);
             label1.TabIndex = 40;
@@ -98,7 +98,7 @@
             // 
             // txtClaseProducto
             // 
-            txtClaseProducto.Location = new Point(142, 300);
+            txtClaseProducto.Location = new Point(58, 295);
             txtClaseProducto.Multiline = true;
             txtClaseProducto.Name = "txtClaseProducto";
             txtClaseProducto.Size = new Size(211, 23);
@@ -107,7 +107,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(198, 282);
+            label4.Location = new Point(114, 277);
             label4.Name = "label4";
             label4.Size = new Size(90, 15);
             label4.TabIndex = 50;
@@ -116,7 +116,7 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(216, 234);
+            label5.Location = new Point(132, 229);
             label5.Name = "label5";
             label5.Size = new Size(52, 15);
             label5.TabIndex = 48;
@@ -124,7 +124,7 @@
             // 
             // txtMFProducto
             // 
-            txtMFProducto.Location = new Point(142, 199);
+            txtMFProducto.Location = new Point(58, 194);
             txtMFProducto.Multiline = true;
             txtMFProducto.Name = "txtMFProducto";
             txtMFProducto.Size = new Size(211, 23);
@@ -133,7 +133,7 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(224, 181);
+            label6.Location = new Point(140, 176);
             label6.Name = "label6";
             label6.Size = new Size(36, 15);
             label6.TabIndex = 46;
@@ -141,7 +141,7 @@
             // 
             // btnCancelar
             // 
-            btnCancelar.Location = new Point(254, 394);
+            btnCancelar.Location = new Point(170, 389);
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(114, 44);
             btnCancelar.TabIndex = 53;
@@ -151,7 +151,7 @@
             // 
             // btnGuardar
             // 
-            btnGuardar.Location = new Point(118, 394);
+            btnGuardar.Location = new Point(34, 389);
             btnGuardar.Name = "btnGuardar";
             btnGuardar.Size = new Size(114, 44);
             btnGuardar.TabIndex = 52;
@@ -161,7 +161,7 @@
             // 
             // numericUpDownPrecioProducto
             // 
-            numericUpDownPrecioProducto.Location = new Point(183, 252);
+            numericUpDownPrecioProducto.Location = new Point(99, 247);
             numericUpDownPrecioProducto.Maximum = new decimal(new int[] { 1410065407, 2, 0, 0 });
             numericUpDownPrecioProducto.Name = "numericUpDownPrecioProducto";
             numericUpDownPrecioProducto.Size = new Size(120, 23);
@@ -171,7 +171,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(524, 450);
+            ClientSize = new Size(325, 450);
             Controls.Add(numericUpDownPrecioProducto);
             Controls.Add(btnCancelar);
             Controls.Add(btnGuardar);
