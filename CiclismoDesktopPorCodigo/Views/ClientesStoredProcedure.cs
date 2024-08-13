@@ -73,16 +73,16 @@ namespace CiclismoDesktopPorCodigo.Views
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            NuevoEditarClienteView nuevoEditarClienteView = new NuevoEditarClienteView();
-            nuevoEditarClienteView.ShowDialog();
+            NuevoEditarClienteStoredProcedureView nuevoEditarClienteStoredProcedureView = new NuevoEditarClienteStoredProcedureView();
+            nuevoEditarClienteStoredProcedureView.ShowDialog();
             CargarDatosAGrilla();
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            int idClienteAModificar = (int)dataGridClientes.CurrentRow.Cells[0].Value;
-            NuevoEditarClienteView nuevoEditarClienteView = new NuevoEditarClienteView(idClienteAModificar);
-            nuevoEditarClienteView.ShowDialog();
+            int idCLienteEdit = (int)dataGridClientes.CurrentRow.Cells[0].Value;
+            NuevoEditarClienteStoredProcedureView nuevoEditarClienteStoredProcedureView = new NuevoEditarClienteStoredProcedureView(idCLienteEdit);
+            nuevoEditarClienteStoredProcedureView.ShowDialog();
             CargarDatosAGrilla();
         }
     }
