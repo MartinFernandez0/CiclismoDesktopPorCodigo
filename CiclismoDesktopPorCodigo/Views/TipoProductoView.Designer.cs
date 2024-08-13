@@ -105,7 +105,7 @@
             Controls.Add(dataGridTipoProducto);
             Name = "TipoProductoView";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "TipoProductoView";
+            Text = "Gestion tipo de productos";
             ((System.ComponentModel.ISupportInitialize)dataGridTipoProducto).EndInit();
             ResumeLayout(false);
         }

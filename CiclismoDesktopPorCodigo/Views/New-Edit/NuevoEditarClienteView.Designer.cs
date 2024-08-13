@@ -361,7 +361,7 @@
             Controls.Add(label1);
             Name = "NuevoEditarClienteView";
             StartPosition = FormStartPosition.CenterParent;
-            Text = "NuevoEditarClienteView";
+            Text = "Gestion Clientes";
             ResumeLayout(false);
             PerformLayout();
         }

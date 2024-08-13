@@ -45,6 +45,7 @@
             btnProductos = new Button();
             button1 = new Button();
             btnTipoProducto = new Button();
+            btnClienteSP = new Button();
             menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
@@ -207,9 +208,22 @@
             btnTipoProducto.Name = "btnTipoProducto";
             btnTipoProducto.Size = new Size(114, 51);
             btnTipoProducto.TabIndex = 63;
-            btnTipoProducto.Text = "&Tipo";
+            btnTipoProducto.Text = "&Tipos Productos";
             btnTipoProducto.UseVisualStyleBackColor = false;
             btnTipoProducto.Click += btnTipoProducto_Click;
+            // 
+            // btnClienteSP
+            // 
+            btnClienteSP.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            btnClienteSP.BackColor = Color.MediumSeaGreen;
+            btnClienteSP.Font = new Font("Segoe UI", 10F);
+            btnClienteSP.Location = new Point(329, 279);
+            btnClienteSP.Name = "btnClienteSP";
+            btnClienteSP.Size = new Size(114, 51);
+            btnClienteSP.TabIndex = 64;
+            btnClienteSP.Text = "Procedimiento Almacenado";
+            btnClienteSP.UseVisualStyleBackColor = false;
+            btnClienteSP.Click += btnClienteSP_Click;
             // 
             // MenuPrincipalView
             // 
@@ -219,6 +233,7 @@
             BackgroundImage = Properties.Resources.pexels_alscre_28476481;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(788, 450);
+            Controls.Add(btnClienteSP);
             Controls.Add(btnTipoProducto);
             Controls.Add(button1);
             Controls.Add(btnProductos);
@@ -259,5 +274,6 @@
         private Button button1;
         private Button btnTipoProducto;
         private ToolStripMenuItem gestionarClientesStoredProcedureToolStripMenuItem;
+        private Button btnClienteSP;
     }
 }

@@ -66,5 +66,11 @@ namespace CiclismoDesktopPorCodigo
             ClientesStoredProcedureView clientesStoredProcedure = new ClientesStoredProcedureView();
             clientesStoredProcedure.ShowDialog();
         }
+
+        private void btnClienteSP_Click(object sender, EventArgs e)
+        {
+            ClientesStoredProcedureView clientesStoredProcedure = new ClientesStoredProcedureView();
+            clientesStoredProcedure.ShowDialog();
+        }
     }
 }

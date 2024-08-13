@@ -103,7 +103,7 @@
             Controls.Add(label1);
             Name = "NuevoEditarTipoProductoView";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "NuevoEditarTipoProductoView";
+            Text = "Gestion tipo de productos";
             ResumeLayout(false);
             PerformLayout();
         }

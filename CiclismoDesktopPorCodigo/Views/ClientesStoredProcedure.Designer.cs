@@ -121,7 +121,7 @@
             Controls.Add(btnAgregar);
             Name = "ClientesStoredProcedureView";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "ClientesStoreProcedure";
+            Text = "Procedimientos Almacenados Clientes";
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridClientes).EndInit();
             ResumeLayout(false);

@@ -121,7 +121,7 @@
             Controls.Add(label1);
             Name = "NuevoEditarClienteStoredProcedureView";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "NuevoEditarClientesStoredProcedure";
+            Text = "Gestion SP Clientes";
             ResumeLayout(false);
             PerformLayout();
         }
