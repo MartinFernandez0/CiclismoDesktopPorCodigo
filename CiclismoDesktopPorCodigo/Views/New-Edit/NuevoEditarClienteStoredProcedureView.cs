@@ -15,7 +15,7 @@ namespace CiclismoDesktopPorCodigo.Views.New_Edit
     public partial class NuevoEditarClienteStoredProcedureView : Form
     {
         SqlCommand comand = new SqlCommand();
-        private int idCLienteEdit;
+        private int? idCLienteEdit;
 
         public NuevoEditarClienteStoredProcedureView()
         {
