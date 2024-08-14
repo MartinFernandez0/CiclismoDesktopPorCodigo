@@ -72,5 +72,11 @@ namespace CiclismoDesktopPorCodigo
             ClientesStoredProcedureView clientesStoredProcedure = new ClientesStoredProcedureView();
             clientesStoredProcedure.ShowDialog();
         }
+
+        private void gestionarClientesORMToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ClientesORMView clientesORMView = new ClientesORMView();
+            clientesORMView.ShowDialog();
+        }
     }
 }

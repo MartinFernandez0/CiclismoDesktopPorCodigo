@@ -46,6 +46,7 @@
             button1 = new Button();
             btnTipoProducto = new Button();
             btnClienteSP = new Button();
+            gestionarClientesORMToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
@@ -63,7 +64,7 @@
             // 
             // principalToolStripMenuItem
             // 
-            principalToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { gestionarClientesToolStripMenuItem, gestionarEmpleadosToolStripMenuItem, gestionarProductosToolStripMenuItem, gestionarClientesStoredProcedureToolStripMenuItem });
+            principalToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { gestionarClientesToolStripMenuItem, gestionarEmpleadosToolStripMenuItem, gestionarProductosToolStripMenuItem, gestionarClientesStoredProcedureToolStripMenuItem, gestionarClientesORMToolStripMenuItem });
             principalToolStripMenuItem.Name = "principalToolStripMenuItem";
             principalToolStripMenuItem.Size = new Size(65, 20);
             principalToolStripMenuItem.Text = "Principal";
@@ -225,6 +226,13 @@
             btnClienteSP.UseVisualStyleBackColor = false;
             btnClienteSP.Click += btnClienteSP_Click;
             // 
+            // gestionarClientesORMToolStripMenuItem
+            // 
+            gestionarClientesORMToolStripMenuItem.Name = "gestionarClientesORMToolStripMenuItem";
+            gestionarClientesORMToolStripMenuItem.Size = new Size(271, 22);
+            gestionarClientesORMToolStripMenuItem.Text = "Gestionar Clientes - ORM";
+            gestionarClientesORMToolStripMenuItem.Click += gestionarClientesORMToolStripMenuItem_Click;
+            // 
             // MenuPrincipalView
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -275,5 +283,6 @@
         private Button btnTipoProducto;
         private ToolStripMenuItem gestionarClientesStoredProcedureToolStripMenuItem;
         private Button btnClienteSP;
+        private ToolStripMenuItem gestionarClientesORMToolStripMenuItem;
     }
 }
