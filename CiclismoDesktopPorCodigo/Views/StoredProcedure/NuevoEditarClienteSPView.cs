@@ -12,17 +12,17 @@ using System.Windows.Forms;
 
 namespace CiclismoDesktopPorCodigo.Views.New_Edit
 {
-    public partial class NuevoEditarClienteStoredProcedureView : Form
+    public partial class NuevoEditarClienteSPView : Form
     {
         SqlCommand comand = new SqlCommand();
         private int? idCLienteEdit;
 
-        public NuevoEditarClienteStoredProcedureView()
+        public NuevoEditarClienteSPView()
         {
             InitializeComponent();
             comand.Connection = Helper.CrearConexion();
         }
-        public NuevoEditarClienteStoredProcedureView(int idCLienteEdit)
+        public NuevoEditarClienteSPView(int idCLienteEdit)
         {
             InitializeComponent();
             comand.Connection = Helper.CrearConexion();

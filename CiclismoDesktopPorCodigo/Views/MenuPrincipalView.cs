@@ -1,4 +1,5 @@
 using CiclismoDesktopPorCodigo.Views;
+using CiclismoDesktopPorCodigo.Views.StoredProcedure;
 
 namespace CiclismoDesktopPorCodigo
 {
@@ -77,6 +78,18 @@ namespace CiclismoDesktopPorCodigo
         {
             ClientesORMView clientesORMView = new ClientesORMView();
             clientesORMView.ShowDialog();
+        }
+
+        private void gestionarEmpleadosStoredProcedureToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            EmpleadosStoredProcedure empleadosStoredProcedure = new EmpleadosStoredProcedure();
+            empleadosStoredProcedure.ShowDialog();
+        }
+
+        private void btnEmpleadoSP_Click(object sender, EventArgs e)
+        {
+            EmpleadosStoredProcedure empleadosStoredProcedure = new EmpleadosStoredProcedure();
+            empleadosStoredProcedure.ShowDialog();
         }
     }
 }

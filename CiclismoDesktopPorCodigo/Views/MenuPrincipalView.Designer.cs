@@ -35,6 +35,8 @@
             gestionarEmpleadosToolStripMenuItem = new ToolStripMenuItem();
             gestionarProductosToolStripMenuItem = new ToolStripMenuItem();
             gestionarClientesStoredProcedureToolStripMenuItem = new ToolStripMenuItem();
+            gestionarClientesORMToolStripMenuItem = new ToolStripMenuItem();
+            gestionarEmpleadosStoredProcedureToolStripMenuItem = new ToolStripMenuItem();
             salirToolStripMenuItem = new ToolStripMenuItem();
             salirDelSistemaToolStripMenuItem = new ToolStripMenuItem();
             pictureBox1 = new PictureBox();
@@ -46,7 +48,7 @@
             button1 = new Button();
             btnTipoProducto = new Button();
             btnClienteSP = new Button();
-            gestionarClientesORMToolStripMenuItem = new ToolStripMenuItem();
+            btnEmpleadoSP = new Button();
             menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
@@ -64,7 +66,7 @@
             // 
             // principalToolStripMenuItem
             // 
-            principalToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { gestionarClientesToolStripMenuItem, gestionarEmpleadosToolStripMenuItem, gestionarProductosToolStripMenuItem, gestionarClientesStoredProcedureToolStripMenuItem, gestionarClientesORMToolStripMenuItem });
+            principalToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { gestionarClientesToolStripMenuItem, gestionarEmpleadosToolStripMenuItem, gestionarProductosToolStripMenuItem, gestionarClientesStoredProcedureToolStripMenuItem, gestionarClientesORMToolStripMenuItem, gestionarEmpleadosStoredProcedureToolStripMenuItem });
             principalToolStripMenuItem.Name = "principalToolStripMenuItem";
             principalToolStripMenuItem.Size = new Size(65, 20);
             principalToolStripMenuItem.Text = "Principal";
@@ -72,30 +74,44 @@
             // gestionarClientesToolStripMenuItem
             // 
             gestionarClientesToolStripMenuItem.Name = "gestionarClientesToolStripMenuItem";
-            gestionarClientesToolStripMenuItem.Size = new Size(271, 22);
+            gestionarClientesToolStripMenuItem.Size = new Size(287, 22);
             gestionarClientesToolStripMenuItem.Text = "Gestionar Clientes";
             gestionarClientesToolStripMenuItem.Click += gestionarClientesToolStripMenuItem_Click;
             // 
             // gestionarEmpleadosToolStripMenuItem
             // 
             gestionarEmpleadosToolStripMenuItem.Name = "gestionarEmpleadosToolStripMenuItem";
-            gestionarEmpleadosToolStripMenuItem.Size = new Size(271, 22);
+            gestionarEmpleadosToolStripMenuItem.Size = new Size(287, 22);
             gestionarEmpleadosToolStripMenuItem.Text = "Gestionar Empleados";
             gestionarEmpleadosToolStripMenuItem.Click += gestionarEmpleadosToolStripMenuItem_Click;
             // 
             // gestionarProductosToolStripMenuItem
             // 
             gestionarProductosToolStripMenuItem.Name = "gestionarProductosToolStripMenuItem";
-            gestionarProductosToolStripMenuItem.Size = new Size(271, 22);
+            gestionarProductosToolStripMenuItem.Size = new Size(287, 22);
             gestionarProductosToolStripMenuItem.Text = "Gestionar Productos";
             gestionarProductosToolStripMenuItem.Click += gestionarProductosToolStripMenuItem_Click;
             // 
             // gestionarClientesStoredProcedureToolStripMenuItem
             // 
             gestionarClientesStoredProcedureToolStripMenuItem.Name = "gestionarClientesStoredProcedureToolStripMenuItem";
-            gestionarClientesStoredProcedureToolStripMenuItem.Size = new Size(271, 22);
+            gestionarClientesStoredProcedureToolStripMenuItem.Size = new Size(287, 22);
             gestionarClientesStoredProcedureToolStripMenuItem.Text = "Gestionar Clientes (Stored Procedure)";
             gestionarClientesStoredProcedureToolStripMenuItem.Click += gestionarClientesStoredProcedureToolStripMenuItem_Click;
+            // 
+            // gestionarClientesORMToolStripMenuItem
+            // 
+            gestionarClientesORMToolStripMenuItem.Name = "gestionarClientesORMToolStripMenuItem";
+            gestionarClientesORMToolStripMenuItem.Size = new Size(287, 22);
+            gestionarClientesORMToolStripMenuItem.Text = "Gestionar Clientes - ORM";
+            gestionarClientesORMToolStripMenuItem.Click += gestionarClientesORMToolStripMenuItem_Click;
+            // 
+            // gestionarEmpleadosStoredProcedureToolStripMenuItem
+            // 
+            gestionarEmpleadosStoredProcedureToolStripMenuItem.Name = "gestionarEmpleadosStoredProcedureToolStripMenuItem";
+            gestionarEmpleadosStoredProcedureToolStripMenuItem.Size = new Size(287, 22);
+            gestionarEmpleadosStoredProcedureToolStripMenuItem.Text = "Gestionar Empleados (Stored Procedure)";
+            gestionarEmpleadosStoredProcedureToolStripMenuItem.Click += gestionarEmpleadosStoredProcedureToolStripMenuItem_Click;
             // 
             // salirToolStripMenuItem
             // 
@@ -116,7 +132,7 @@
             pictureBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
             pictureBox1.BackColor = Color.Transparent;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(103, 67);
+            pictureBox1.Location = new Point(52, 68);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(94, 149);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
@@ -128,7 +144,7 @@
             pictureBox2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
             pictureBox2.BackColor = Color.Transparent;
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(290, 55);
+            pictureBox2.Location = new Point(239, 56);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(207, 161);
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
@@ -140,7 +156,7 @@
             pictureBox3.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
             pictureBox3.BackColor = Color.Transparent;
             pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(546, 55);
+            pictureBox3.Location = new Point(487, 68);
             pictureBox3.Name = "pictureBox3";
             pictureBox3.Size = new Size(96, 149);
             pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
@@ -150,9 +166,9 @@
             // btnEmpleado
             // 
             btnEmpleado.Anchor = AnchorStyles.Bottom;
-            btnEmpleado.BackColor = Color.MediumSeaGreen;
+            btnEmpleado.BackColor = Color.DarkCyan;
             btnEmpleado.Font = new Font("Segoe UI", 10F);
-            btnEmpleado.Location = new Point(94, 222);
+            btnEmpleado.Location = new Point(43, 223);
             btnEmpleado.Name = "btnEmpleado";
             btnEmpleado.Size = new Size(114, 51);
             btnEmpleado.TabIndex = 54;
@@ -163,9 +179,9 @@
             // btnClientes
             // 
             btnClientes.Anchor = AnchorStyles.Bottom;
-            btnClientes.BackColor = Color.MediumSeaGreen;
+            btnClientes.BackColor = Color.DarkCyan;
             btnClientes.Font = new Font("Segoe UI", 10F);
-            btnClientes.Location = new Point(329, 222);
+            btnClientes.Location = new Point(278, 223);
             btnClientes.Name = "btnClientes";
             btnClientes.Size = new Size(114, 51);
             btnClientes.TabIndex = 55;
@@ -176,9 +192,9 @@
             // btnProductos
             // 
             btnProductos.Anchor = AnchorStyles.Bottom;
-            btnProductos.BackColor = Color.MediumSeaGreen;
+            btnProductos.BackColor = Color.DarkCyan;
             btnProductos.Font = new Font("Segoe UI", 10F);
-            btnProductos.Location = new Point(538, 222);
+            btnProductos.Location = new Point(469, 223);
             btnProductos.Name = "btnProductos";
             btnProductos.Size = new Size(114, 51);
             btnProductos.TabIndex = 56;
@@ -203,9 +219,9 @@
             // btnTipoProducto
             // 
             btnTipoProducto.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            btnTipoProducto.BackColor = Color.MediumSeaGreen;
+            btnTipoProducto.BackColor = Color.DarkCyan;
             btnTipoProducto.Font = new Font("Segoe UI", 10F);
-            btnTipoProducto.Location = new Point(538, 279);
+            btnTipoProducto.Location = new Point(651, 223);
             btnTipoProducto.Name = "btnTipoProducto";
             btnTipoProducto.Size = new Size(114, 51);
             btnTipoProducto.TabIndex = 63;
@@ -216,22 +232,28 @@
             // btnClienteSP
             // 
             btnClienteSP.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            btnClienteSP.BackColor = Color.MediumSeaGreen;
+            btnClienteSP.BackColor = Color.SteelBlue;
             btnClienteSP.Font = new Font("Segoe UI", 10F);
-            btnClienteSP.Location = new Point(329, 279);
+            btnClienteSP.Location = new Point(278, 280);
             btnClienteSP.Name = "btnClienteSP";
-            btnClienteSP.Size = new Size(114, 51);
+            btnClienteSP.Size = new Size(42, 27);
             btnClienteSP.TabIndex = 64;
-            btnClienteSP.Text = "Procedimiento Almacenado";
+            btnClienteSP.Text = "SP";
             btnClienteSP.UseVisualStyleBackColor = false;
             btnClienteSP.Click += btnClienteSP_Click;
             // 
-            // gestionarClientesORMToolStripMenuItem
+            // btnEmpleadoSP
             // 
-            gestionarClientesORMToolStripMenuItem.Name = "gestionarClientesORMToolStripMenuItem";
-            gestionarClientesORMToolStripMenuItem.Size = new Size(271, 22);
-            gestionarClientesORMToolStripMenuItem.Text = "Gestionar Clientes - ORM";
-            gestionarClientesORMToolStripMenuItem.Click += gestionarClientesORMToolStripMenuItem_Click;
+            btnEmpleadoSP.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            btnEmpleadoSP.BackColor = Color.RoyalBlue;
+            btnEmpleadoSP.Font = new Font("Segoe UI", 10F);
+            btnEmpleadoSP.Location = new Point(43, 280);
+            btnEmpleadoSP.Name = "btnEmpleadoSP";
+            btnEmpleadoSP.Size = new Size(42, 27);
+            btnEmpleadoSP.TabIndex = 65;
+            btnEmpleadoSP.Text = "SP";
+            btnEmpleadoSP.UseVisualStyleBackColor = false;
+            btnEmpleadoSP.Click += btnEmpleadoSP_Click;
             // 
             // MenuPrincipalView
             // 
@@ -241,6 +263,7 @@
             BackgroundImage = Properties.Resources.pexels_alscre_28476481;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(788, 450);
+            Controls.Add(btnEmpleadoSP);
             Controls.Add(btnClienteSP);
             Controls.Add(btnTipoProducto);
             Controls.Add(button1);
@@ -284,5 +307,7 @@
         private ToolStripMenuItem gestionarClientesStoredProcedureToolStripMenuItem;
         private Button btnClienteSP;
         private ToolStripMenuItem gestionarClientesORMToolStripMenuItem;
+        private ToolStripMenuItem gestionarEmpleadosStoredProcedureToolStripMenuItem;
+        private Button btnEmpleadoSP;
     }
 }

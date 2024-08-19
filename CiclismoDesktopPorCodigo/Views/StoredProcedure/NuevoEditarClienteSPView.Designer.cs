@@ -1,6 +1,6 @@
 ﻿namespace CiclismoDesktopPorCodigo.Views.New_Edit
 {
-    partial class NuevoEditarClienteStoredProcedureView
+    partial class NuevoEditarClienteSPView
     {
         /// <summary>
         /// Required designer variable.
