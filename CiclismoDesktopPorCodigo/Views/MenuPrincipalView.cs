@@ -1,4 +1,5 @@
 using CiclismoDesktopPorCodigo.Views;
+using CiclismoDesktopPorCodigo.Views.LINQ;
 using CiclismoDesktopPorCodigo.Views.StoredProcedure;
 
 namespace CiclismoDesktopPorCodigo
@@ -90,6 +91,12 @@ namespace CiclismoDesktopPorCodigo
         {
             EmpleadosStoredProcedure empleadosStoredProcedure = new EmpleadosStoredProcedure();
             empleadosStoredProcedure.ShowDialog();
+        }
+
+        private void pruebasConLINQToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PruebasLINQView pruebasLINQView = new PruebasLINQView();
+            pruebasLINQView.ShowDialog();
         }
     }
 }

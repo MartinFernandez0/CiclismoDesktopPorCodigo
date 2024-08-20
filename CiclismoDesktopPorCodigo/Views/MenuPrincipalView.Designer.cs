@@ -49,6 +49,7 @@
             btnTipoProducto = new Button();
             btnClienteSP = new Button();
             btnEmpleadoSP = new Button();
+            pruebasConLINQToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
@@ -66,7 +67,7 @@
             // 
             // principalToolStripMenuItem
             // 
-            principalToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { gestionarClientesToolStripMenuItem, gestionarEmpleadosToolStripMenuItem, gestionarProductosToolStripMenuItem, gestionarClientesStoredProcedureToolStripMenuItem, gestionarClientesORMToolStripMenuItem, gestionarEmpleadosStoredProcedureToolStripMenuItem });
+            principalToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { gestionarClientesToolStripMenuItem, gestionarEmpleadosToolStripMenuItem, gestionarProductosToolStripMenuItem, gestionarClientesStoredProcedureToolStripMenuItem, gestionarClientesORMToolStripMenuItem, gestionarEmpleadosStoredProcedureToolStripMenuItem, pruebasConLINQToolStripMenuItem });
             principalToolStripMenuItem.Name = "principalToolStripMenuItem";
             principalToolStripMenuItem.Size = new Size(65, 20);
             principalToolStripMenuItem.Text = "Principal";
@@ -255,6 +256,13 @@
             btnEmpleadoSP.UseVisualStyleBackColor = false;
             btnEmpleadoSP.Click += btnEmpleadoSP_Click;
             // 
+            // pruebasConLINQToolStripMenuItem
+            // 
+            pruebasConLINQToolStripMenuItem.Name = "pruebasConLINQToolStripMenuItem";
+            pruebasConLINQToolStripMenuItem.Size = new Size(287, 22);
+            pruebasConLINQToolStripMenuItem.Text = "Pruebas con LINQ";
+            pruebasConLINQToolStripMenuItem.Click += pruebasConLINQToolStripMenuItem_Click;
+            // 
             // MenuPrincipalView
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -309,5 +317,6 @@
         private ToolStripMenuItem gestionarClientesORMToolStripMenuItem;
         private ToolStripMenuItem gestionarEmpleadosStoredProcedureToolStripMenuItem;
         private Button btnEmpleadoSP;
+        private ToolStripMenuItem pruebasConLINQToolStripMenuItem;
     }
 }

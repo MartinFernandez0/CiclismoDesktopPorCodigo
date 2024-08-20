@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<books>
+	<book>
+		<title>Cien años de soledad</title>
+		<author>Gabriel García Márquez</author>
+		<year>1967</year>
+		<genre>Realismo mágico</genre>
+	</book>
+	<book>
+		<title>Don Quijote de la Mancha</title>
+		<author>Miguel de Cervantes</author>
+		<year>1605</year>
+		<genre>Novela</genre>
+	</book>
+	<book>
+		<title>La sombra del viento</title>
+		<author>Carlos Ruiz Zafón</author>
+		<year>2001</year>
+		<genre>Ficción</genre>
+	</book>
+	<book>
+		<title>Rayuela</title>
+		<author>Julio Cortázar</author>
+		<year>1963</year>
+		<genre>Novela</genre>
+	</book>
+	<book>
+		<title>El amor en los tiempos del cólera</title>
+		<author>Gabriel García Márquez</author>
+		<year>1985</year>
+		<genre>Realismo mágico</genre>
+	</book>
+	<book>
+		<title>El Aleph</title>
+		<author>Jorge Luis Borges</author>
+		<year>1949</year>
+		<genre>Ficción</genre>
+	</book>
+	<book>
+		<title>La casa de los espíritus</title>
+		<author>Isabel Allende</author>
+		<year>1982</year>
+		<genre>Realismo mágico</genre>
+	</book>
+	<book>
+		<title>Pedro Páramo</title>
+		<author>Juan Rulfo</author>
+		<year>1955</year>
+		<genre>Realismo mágico</genre>
+	</book>
+	<book>
+		<title>El túnel</title>
+		<author>Ernesto Sabato</author>
+		<year>1948</year>
+		<genre>Ficción</genre>
+	</book>
+	<book>
+		<title>La ciudad y los perros</title>
+		<author>Mario Vargas Llosa</author>
+		<year>1962</year>
+		<genre>Novela</genre>
+	</book>
+	<book>
+		<title>Crónica de una muerte anunciada</title>
+		<author>Gabriel García Márquez</author>
+		<year>1981</year>
+		<genre>Ficción</genre>
+	</book>
+	<book>
+		<title>Ficciones</title>
+		<author>Jorge Luis Borges</author>
+		<year>1944</year>
+		<genre>Ficción</genre>
+	</book>
+	<book>
+		<title>Los detectives salvajes</title>
+		<author>Roberto Bolaño</author>
+		<year>1998</year>
+		<genre>Ficción</genre>
+	</book>
+	<book>
+		<title>Como agua para chocolate</title>
+		<author>Laura Esquivel</author>
+		<year>1989</year>
+		<genre>Ficción</genre>
+	</book>
+	<book>
+		<title>La colmena</title>
+		<author>Camilio José Cela</author>
+		<year>1951</year>
+		<genre>Ficción</genre>
+	</book>
+	<book>
+		<title>El coronel no tiene quien le escriba</title>
+		<author>Gabriel García Márquez</author>
+		<year>1961</year>
+		<genre>Ficción</genre>
+	</book>
+	<book>
+		<title>La tregua</title>
+		<author>Mario Benedetti</author>
+		<year>1960</year>
+		<genre>Novela</genre>
+	</book>
+	<book>
+		<title>La familia de Pascual Duarte</title>
+		<author>Camilio José Cela</author>
+		<year>1942</year>
+		<genre>Ficción</genre>
+	</book>
+	<book>
+		<title>La fiesta del Chivo</title>
+		<author>Mario Vargas Llosa</author>
+		<year>2000</year>
+		<genre>Novela</genre>
+	</book>
+	<book>
+		<title>El otoño del patriarca</title>
+		<author>Gabriel García Márquez</author>
+		<year>1975</year>
+		<genre>Ficción</genre>
+	</book>
+	<book>
+		<title>El señor presidente</title>
+		<author>Miguel Ángel Asturias</author>
+		<year>1946</year>
+		<genre>Novela</genre>
+	</book>
+</books>
