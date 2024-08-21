@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace CiclismoDesktopPorCodigo.Modelos;
+namespace CiclismoDesktopPorCodigo.DatabaseModels.ModelosCiclismo;
 
 public partial class VentasDetalle
 {

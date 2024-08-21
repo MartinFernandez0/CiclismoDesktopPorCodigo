@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using CiclismoDesktopPorCodigo.Modelos;
+using CiclismoDesktopPorCodigo.DatabaseModels.ModelosCiclismo;
 using CiclismoDesktopPorCodigo.Views.New_Edit;
 
 namespace CiclismoDesktopPorCodigo.Views

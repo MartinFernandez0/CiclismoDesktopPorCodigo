@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 
-namespace CiclismoDesktopPorCodigo.Modelos;
+namespace CiclismoDesktopPorCodigo.DatabaseModels.ModelosCiclismo;
 
 public partial class CiclismoRenzo2Context : DbContext
 {

@@ -1,4 +1,4 @@
-﻿using CiclismoDesktopPorCodigo.Modelos;
+﻿using CiclismoDesktopPorCodigo.DatabaseModels.ModelosCiclismo;
 using CiclismoDesktopPorCodigo.Utils;
 using System;
 using System.Collections.Generic;
@@ -13,7 +13,7 @@ using System.Windows.Forms;
 
 namespace CiclismoDesktopPorCodigo.Views.New_Edit
 {
-public partial class NuevoEditarClienteORMView : Form
+    public partial class NuevoEditarClienteORMView : Form
     {
         CiclismoRenzo2Context context = new CiclismoRenzo2Context();
         private Cliente? cliente;

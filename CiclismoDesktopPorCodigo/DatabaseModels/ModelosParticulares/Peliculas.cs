@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CiclismoDesktopPorCodigo.Models
+namespace CiclismoDesktopPorCodigo.DatabaseModels.ModelosParticulares
 {
     public class Peliculas
     {

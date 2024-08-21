@@ -1,5 +1,5 @@
-﻿using CiclismoDesktopPorCodigo.Modelos;
-using CiclismoDesktopPorCodigo.Models;
+﻿using CiclismoDesktopPorCodigo.DatabaseModels.ModelosParticulares;
+using CiclismoDesktopPorCodigo.Modelos;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json.Linq;
 using System;
