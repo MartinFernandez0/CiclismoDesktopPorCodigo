@@ -48,18 +48,18 @@
             // 
             dataGridResultados.ClipboardCopyMode = DataGridViewClipboardCopyMode.Disable;
             dataGridResultados.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridResultados.Location = new Point(16, 270);
+            dataGridResultados.Location = new Point(30, 270);
             dataGridResultados.Name = "dataGridResultados";
-            dataGridResultados.Size = new Size(755, 148);
+            dataGridResultados.Size = new Size(1044, 220);
             dataGridResultados.TabIndex = 0;
             // 
             // btnPruebaArray
             // 
             btnPruebaArray.BackColor = SystemColors.ButtonHighlight;
             btnPruebaArray.ForeColor = SystemColors.ActiveCaptionText;
-            btnPruebaArray.Location = new Point(19, 139);
+            btnPruebaArray.Location = new Point(30, 139);
             btnPruebaArray.Name = "btnPruebaArray";
-            btnPruebaArray.Size = new Size(88, 40);
+            btnPruebaArray.Size = new Size(100, 40);
             btnPruebaArray.TabIndex = 1;
             btnPruebaArray.Text = "Prueba Array";
             btnPruebaArray.UseVisualStyleBackColor = false;
@@ -69,9 +69,9 @@
             // 
             btnPruebaSQL.BackColor = SystemColors.ButtonHighlight;
             btnPruebaSQL.ForeColor = SystemColors.ActiveCaptionText;
-            btnPruebaSQL.Location = new Point(19, 89);
+            btnPruebaSQL.Location = new Point(30, 89);
             btnPruebaSQL.Name = "btnPruebaSQL";
-            btnPruebaSQL.Size = new Size(88, 40);
+            btnPruebaSQL.Size = new Size(100, 40);
             btnPruebaSQL.TabIndex = 2;
             btnPruebaSQL.Text = "Prueba SQL";
             btnPruebaSQL.UseVisualStyleBackColor = false;
@@ -81,9 +81,9 @@
             // 
             btnPruebasXML.BackColor = SystemColors.ButtonHighlight;
             btnPruebasXML.ForeColor = SystemColors.ActiveCaptionText;
-            btnPruebasXML.Location = new Point(19, 38);
+            btnPruebasXML.Location = new Point(30, 38);
             btnPruebasXML.Name = "btnPruebasXML";
-            btnPruebasXML.Size = new Size(88, 40);
+            btnPruebasXML.Size = new Size(100, 40);
             btnPruebasXML.TabIndex = 3;
             btnPruebasXML.Text = "Prueba XML";
             btnPruebasXML.UseVisualStyleBackColor = false;
@@ -93,9 +93,9 @@
             // 
             bntJSON.BackColor = SystemColors.ButtonHighlight;
             bntJSON.ForeColor = SystemColors.ActiveCaptionText;
-            bntJSON.Location = new Point(132, 38);
+            bntJSON.Location = new Point(143, 38);
             bntJSON.Name = "bntJSON";
-            bntJSON.Size = new Size(88, 40);
+            bntJSON.Size = new Size(102, 40);
             bntJSON.TabIndex = 4;
             bntJSON.Text = "Prueba JSON";
             bntJSON.UseVisualStyleBackColor = false;
@@ -105,9 +105,9 @@
             // 
             btnPruebaSelect.BackColor = SystemColors.ButtonHighlight;
             btnPruebaSelect.ForeColor = SystemColors.ActiveCaptionText;
-            btnPruebaSelect.Location = new Point(132, 89);
+            btnPruebaSelect.Location = new Point(143, 89);
             btnPruebaSelect.Name = "btnPruebaSelect";
-            btnPruebaSelect.Size = new Size(88, 40);
+            btnPruebaSelect.Size = new Size(102, 40);
             btnPruebaSelect.TabIndex = 5;
             btnPruebaSelect.Text = "Prueba Select";
             btnPruebaSelect.UseVisualStyleBackColor = false;
@@ -117,9 +117,9 @@
             // 
             btnPruebaWhere.BackColor = SystemColors.ButtonHighlight;
             btnPruebaWhere.ForeColor = SystemColors.ActiveCaptionText;
-            btnPruebaWhere.Location = new Point(132, 139);
+            btnPruebaWhere.Location = new Point(143, 139);
             btnPruebaWhere.Name = "btnPruebaWhere";
-            btnPruebaWhere.Size = new Size(88, 40);
+            btnPruebaWhere.Size = new Size(102, 40);
             btnPruebaWhere.TabIndex = 6;
             btnPruebaWhere.Text = "Prueba Where";
             btnPruebaWhere.UseVisualStyleBackColor = false;
@@ -129,7 +129,7 @@
             // 
             btnPruebaWhereAvanzado.BackColor = SystemColors.ButtonHighlight;
             btnPruebaWhereAvanzado.ForeColor = SystemColors.ActiveCaptionText;
-            btnPruebaWhereAvanzado.Location = new Point(240, 38);
+            btnPruebaWhereAvanzado.Location = new Point(251, 38);
             btnPruebaWhereAvanzado.Name = "btnPruebaWhereAvanzado";
             btnPruebaWhereAvanzado.Size = new Size(100, 40);
             btnPruebaWhereAvanzado.TabIndex = 7;
@@ -139,7 +139,7 @@
             // 
             // txtFiltro
             // 
-            txtFiltro.Location = new Point(16, 229);
+            txtFiltro.Location = new Point(30, 213);
             txtFiltro.Name = "txtFiltro";
             txtFiltro.Size = new Size(185, 23);
             txtFiltro.TabIndex = 8;
@@ -148,9 +148,9 @@
             // 
             btnOrderBy.BackColor = SystemColors.ButtonHighlight;
             btnOrderBy.ForeColor = SystemColors.ActiveCaptionText;
-            btnOrderBy.Location = new Point(240, 89);
+            btnOrderBy.Location = new Point(251, 89);
             btnOrderBy.Name = "btnOrderBy";
-            btnOrderBy.Size = new Size(88, 40);
+            btnOrderBy.Size = new Size(100, 40);
             btnOrderBy.TabIndex = 9;
             btnOrderBy.Text = "Prueba OrderBy";
             btnOrderBy.UseVisualStyleBackColor = false;
@@ -160,7 +160,7 @@
             // 
             txtOrderByAvanzado.BackColor = SystemColors.ButtonHighlight;
             txtOrderByAvanzado.ForeColor = SystemColors.ActiveCaptionText;
-            txtOrderByAvanzado.Location = new Point(240, 139);
+            txtOrderByAvanzado.Location = new Point(251, 139);
             txtOrderByAvanzado.Name = "txtOrderByAvanzado";
             txtOrderByAvanzado.Size = new Size(102, 40);
             txtOrderByAvanzado.TabIndex = 10;
@@ -172,9 +172,9 @@
             // 
             btnOffType.BackColor = SystemColors.ButtonHighlight;
             btnOffType.ForeColor = SystemColors.ActiveCaptionText;
-            btnOffType.Location = new Point(346, 38);
+            btnOffType.Location = new Point(357, 38);
             btnOffType.Name = "btnOffType";
-            btnOffType.Size = new Size(88, 40);
+            btnOffType.Size = new Size(102, 40);
             btnOffType.TabIndex = 11;
             btnOffType.Text = "Prueba OffType";
             btnOffType.UseVisualStyleBackColor = false;
@@ -184,9 +184,9 @@
             // 
             btnPruebaSelectMany.BackColor = SystemColors.ButtonHighlight;
             btnPruebaSelectMany.ForeColor = SystemColors.ActiveCaptionText;
-            btnPruebaSelectMany.Location = new Point(346, 89);
+            btnPruebaSelectMany.Location = new Point(357, 89);
             btnPruebaSelectMany.Name = "btnPruebaSelectMany";
-            btnPruebaSelectMany.Size = new Size(88, 40);
+            btnPruebaSelectMany.Size = new Size(102, 40);
             btnPruebaSelectMany.TabIndex = 12;
             btnPruebaSelectMany.Text = "Prueba Select Many";
             btnPruebaSelectMany.UseVisualStyleBackColor = false;
@@ -197,7 +197,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ButtonHighlight;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1109, 502);
             Controls.Add(btnPruebaSelectMany);
             Controls.Add(btnOffType);
             Controls.Add(txtOrderByAvanzado);
