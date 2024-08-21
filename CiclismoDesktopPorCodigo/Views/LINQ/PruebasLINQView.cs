@@ -1,5 +1,5 @@
-﻿using CiclismoDesktopPorCodigo.DatabaseModels.ModelosParticulares;
-using CiclismoDesktopPorCodigo.Modelos;
+﻿using CiclismoDesktopPorCodigo.DatabaseModels.ModelosCiclismo;
+using CiclismoDesktopPorCodigo.DatabaseModels.ModelosParticulares;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json.Linq;
 using System;
@@ -145,6 +145,36 @@ namespace CiclismoDesktopPorCodigo.Views.LINQ
                 var clientes = context.Clientes.OrderBy(c => c.Pais).ThenBy(c => c.Nombre).ToList();
                 dataGridResultados.DataSource = clientes.ToList();
             }
+        }
+
+        private void btnOffType_Click(object sender, EventArgs e)
+        {
+            //Creamos un array de objets
+            object[] objects = [1, "San Justo", true, new string[] { "Hola Mundo" }, 5, "Crespo", 7.5f, 8, 9, 10];
+
+            // Con LINQ filtramos los numeros pares y creamos un nuevo array
+            var TextosEnArray = objects.OfType<string>().Select(S => new
+            {
+                Texto = S,
+            });
+
+            //Mostramos los numeros pares en el DataGridView
+            dataGridResultados.DataSource = TextosEnArray;
+        }
+
+        private void btnPruebaSelectMany_Click(object sender, EventArgs e)
+        {
+            //Creamos un array de objets
+            object[] objects = [1, "San Justo", true, new string[] { "Hola Mundo" }, 5, "Crespo", 7.5f, 8, 9, 10, new string[] { "Argentina" }];
+
+            // Con LINQ filtramos los numeros pares y creamos un nuevo array
+            var TextosEnArray = objects.OfType<string[]>().SelectMany(a => a).Select(S => new
+            {
+                Texto = S,
+            });
+
+            //Mostramos los numeros pares en el DataGridView
+            dataGridResultados.DataSource = TextosEnArray.ToList();
         }
     }
 }
