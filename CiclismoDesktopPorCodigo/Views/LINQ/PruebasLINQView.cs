@@ -1,4 +1,5 @@
-﻿using CiclismoDesktopPorCodigo.DatabaseModels.ModelosCiclismo;
+﻿using CiclismoDesktopPorCodigo.DatabaseModels.ModelosArgentina;
+using CiclismoDesktopPorCodigo.DatabaseModels.ModelosCiclismo;
 using CiclismoDesktopPorCodigo.DatabaseModels.ModelosParticulares;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json.Linq;
@@ -175,6 +176,60 @@ namespace CiclismoDesktopPorCodigo.Views.LINQ
 
             //Mostramos los numeros pares en el DataGridView
             dataGridResultados.DataSource = TextosEnArray.ToList();
+        }
+
+        private void btnOrderByDecending_Click(object sender, EventArgs e)
+        {
+            using (var context = new ArgentinaContext())
+            {
+                //Extension Methods (Metodos de Extension)
+                var provincias = context.Provincias.OrderByDescending(p => p.Nombre);
+
+                //Query Expresion (Expresion de Consulta)
+                //var provincias = from p in context.Provincias
+                //                 orderby p.Nombre descending
+                //                 select p;
+
+                dataGridResultados.DataSource = provincias.ToList();
+            }
+        }
+
+        private void txtGroupBy_Click(object sender, EventArgs e)
+        {
+            using (var context = new ArgentinaContext())
+            {
+                //Extension Methods (Metodos de Extension)
+                var DptoAgrupadosPorProvincia = context.Departamentos.Include(d => d.Provincias).GroupBy(d => d.ProvinciasId).Select(d => new
+                {
+                    NroProvincia = d.First().Provincias.Nombre,
+                    CantidadDepartamentos = d.Count()
+                });
+
+                dataGridResultados.DataSource = DptoAgrupadosPorProvincia.ToList();
+            }
+
+            //haceme un gropuby que me muestre la cantidad de localidades que tiene cada departamento de la provincia de santa fe
+
+        }
+
+        private void txtGroupByLocalidades_Click(object sender, EventArgs e)
+        {
+            using (var context = new ArgentinaContext())
+            {
+                var localidadesPorDepartamento = context.Departamentos
+                 .Include(d => d.Provincias)
+                 .Include(d => d.Localidades)
+                 .Where(d => d.Provincias.Nombre == "Santa Fe")
+                 .Select(d => new
+                 {
+                     Departamento = d.Nombre,
+                     CantidadLocalidades = d.Localidades.Count()
+                 })
+                 .ToList();
+
+                dataGridResultados.DataSource = localidadesPorDepartamento;
+
+            }
         }
     }
 }

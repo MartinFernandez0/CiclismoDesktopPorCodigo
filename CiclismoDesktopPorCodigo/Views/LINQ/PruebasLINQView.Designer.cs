@@ -41,6 +41,9 @@
             txtOrderByAvanzado = new Button();
             btnOffType = new Button();
             btnPruebaSelectMany = new Button();
+            btnOrderByDecending = new Button();
+            txtGroupBy = new Button();
+            txtGroupByLocalidades = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridResultados).BeginInit();
             SuspendLayout();
             // 
@@ -192,12 +195,51 @@
             btnPruebaSelectMany.UseVisualStyleBackColor = false;
             btnPruebaSelectMany.Click += btnPruebaSelectMany_Click;
             // 
+            // btnOrderByDecending
+            // 
+            btnOrderByDecending.BackColor = SystemColors.ButtonHighlight;
+            btnOrderByDecending.ForeColor = SystemColors.ActiveCaptionText;
+            btnOrderByDecending.Location = new Point(359, 139);
+            btnOrderByDecending.Name = "btnOrderByDecending";
+            btnOrderByDecending.Size = new Size(100, 40);
+            btnOrderByDecending.TabIndex = 13;
+            btnOrderByDecending.Text = "OrderBy   Decending";
+            btnOrderByDecending.UseVisualStyleBackColor = false;
+            btnOrderByDecending.Click += btnOrderByDecending_Click;
+            // 
+            // txtGroupBy
+            // 
+            txtGroupBy.BackColor = SystemColors.ButtonHighlight;
+            txtGroupBy.ForeColor = SystemColors.ActiveCaptionText;
+            txtGroupBy.Location = new Point(465, 38);
+            txtGroupBy.Name = "txtGroupBy";
+            txtGroupBy.Size = new Size(100, 40);
+            txtGroupBy.TabIndex = 14;
+            txtGroupBy.Text = "GroupBy";
+            txtGroupBy.UseVisualStyleBackColor = false;
+            txtGroupBy.Click += txtGroupBy_Click;
+            // 
+            // txtGroupByLocalidades
+            // 
+            txtGroupByLocalidades.BackColor = SystemColors.ButtonHighlight;
+            txtGroupByLocalidades.ForeColor = SystemColors.ActiveCaptionText;
+            txtGroupByLocalidades.Location = new Point(465, 89);
+            txtGroupByLocalidades.Name = "txtGroupByLocalidades";
+            txtGroupByLocalidades.Size = new Size(100, 40);
+            txtGroupByLocalidades.TabIndex = 15;
+            txtGroupByLocalidades.Text = "GroupByLocal.";
+            txtGroupByLocalidades.UseVisualStyleBackColor = false;
+            txtGroupByLocalidades.Click += txtGroupByLocalidades_Click;
+            // 
             // PruebasLINQView
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ButtonHighlight;
             ClientSize = new Size(1109, 502);
+            Controls.Add(txtGroupByLocalidades);
+            Controls.Add(txtGroupBy);
+            Controls.Add(btnOrderByDecending);
             Controls.Add(btnPruebaSelectMany);
             Controls.Add(btnOffType);
             Controls.Add(txtOrderByAvanzado);
@@ -234,5 +276,8 @@
         private Button txtOrderByAvanzado;
         private Button btnOffType;
         private Button btnPruebaSelectMany;
+        private Button btnOrderByDecending;
+        private Button txtGroupBy;
+        private Button txtGroupByLocalidades;
     }
 }
