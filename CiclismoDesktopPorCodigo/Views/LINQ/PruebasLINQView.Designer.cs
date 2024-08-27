@@ -227,7 +227,7 @@
             txtGroupByLocalidades.Name = "txtGroupByLocalidades";
             txtGroupByLocalidades.Size = new Size(100, 40);
             txtGroupByLocalidades.TabIndex = 15;
-            txtGroupByLocalidades.Text = "GroupByLocal.";
+            txtGroupByLocalidades.Text = "GroupBy Localidades";
             txtGroupByLocalidades.UseVisualStyleBackColor = false;
             txtGroupByLocalidades.Click += txtGroupByLocalidades_Click;
             // 
